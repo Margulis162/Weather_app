@@ -1,0 +1,18 @@
+// variables
+@use "abstract.scss";
+
+
+
+
+// general
+*, *::before, *::after{
+    box-sizing:border-box;
+  }
+  
+
+
+// elements
+  body{
+    margin:0;
+    background-color: abstract.$back;
+  }
