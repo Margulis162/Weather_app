@@ -11,8 +11,80 @@
   
 
 
-// elements
+// main 
   body{
     margin:0;
     background-color: abstract.$back;
+    color: abstract.$text_main;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    #header{
+      display: flex;
+      align-items:center;
+
+      #header-left{
+        display:flex;
+        inline-size: 50%;
+        align-items:center;
+        justify-content:center;
+        margin: .5rem;
+        padding: .5rem;
+        border-right: 5px solid abstract.$text_main; 
+
+      }
+      
+      #header-right{
+        display:grid;
+        inline-size:50%;
+        justify-content: space-around;
+        gap: .5rem;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+      }
+    }
+  }
+  
+  
+  
+  
+  //  classes
+  
+  .weather-icon{
+    block-size: 40px;
+    inline-size:40px;
+    object-fit: contain;
+  }
+  
+  
+  .weather-icon.large{
+    block-size: 180px;
+    inline-size:180px;
+  }
+
+  .header-current-temp{
+    font-size:2rem;
+    margin-inline-start: 1rem;
+  }
+  
+  
+  .info-group{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  
+
+
+
+  // typography
+
+  .label{
+    font-weight: bold;
+    font-size: .6rem;
+    color:abstract.$text_support;
+  }
+
+  .value-sub-info{
+    font-weight: lighter;
+    font-size: .75rem;
   }
