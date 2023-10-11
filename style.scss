@@ -42,12 +42,21 @@
         grid-template-rows: repeat(2, auto);
       }
     }
+
+
+    .day-section{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 75px); 
+      gap: .5rem;
+      justify-content: center;
+      padding: 1rem;
+    }
   }
   
   
   
   
-  //  classes
+  //  classes header
   
   .weather-icon{
     block-size: 40px;
@@ -74,6 +83,16 @@
   }
   
 
+  // classes day section
+
+  .day-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid abstract.$text_support;
+    border-radius: .25rem;
+    padding: .25rem;
+  }
 
 
   // typography
@@ -88,3 +107,9 @@
     font-weight: lighter;
     font-size: .75rem;
   }
+
+    .day-card-day{
+      font-size: .75rem;
+      color: abstract.$text_main;
+      margin-block-start: .5rem;
+    }

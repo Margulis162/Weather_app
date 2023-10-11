@@ -29,6 +29,13 @@ body #header #header-right {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
 }
+body .day-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 75px);
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
 
 .weather-icon {
   block-size: 40px;
@@ -52,6 +59,15 @@ body #header #header-right {
   align-items: center;
 }
 
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(24, 36, 66);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
 .label {
   font-weight: bold;
   font-size: 0.6rem;
@@ -61,6 +77,12 @@ body #header #header-right {
 .value-sub-info {
   font-weight: lighter;
   font-size: 0.75rem;
+}
+
+.day-card-day {
+  font-size: 0.75rem;
+  color: rgb(122, 71, 34);
+  margin-block-start: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
