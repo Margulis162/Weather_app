@@ -17,7 +17,7 @@
     background-color: abstract.$back;
     color: abstract.$text_main;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    block-size: 100vh;
     #header{
       display: flex;
       align-items:center;
