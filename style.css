@@ -69,6 +69,24 @@ body .day-section {
   padding: 0.25rem;
 }
 
+.hour-section {
+  inline-size: 100%;
+  text-align: center;
+  border-spacing: 0;
+}
+
+.hour-section {
+  background-color: rgba(212, 163, 157, 0.3);
+}
+
+.hour-section:nth-child(even) {
+  background-color: rgba(212, 163, 157, 0.6);
+}
+
+.hour-row > td {
+  padding: 0.25rem 0.5rem;
+}
+
 .label {
   font-weight: bold;
   font-size: 0.6rem;
