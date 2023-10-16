@@ -16,17 +16,18 @@ export function getWeather( lat, lon, timezone){
             timezone,
         }})
         .then(({data}) => {
+        //    return data
             return {
                 current: parseCurrentWeather(data),
-                // daily: parseDailyWeather(data),
+                daily: parseDailyWeather(data),
                 // hourly: paraseHourlyWeather(data),
             }
         })
 };
 
-function parseCurrentWeather({current, daily}) {
+function parseCurrentWeather({current, daily}) { //destructuring obj getting two param out of it
 
-    const{ temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current;
+    const{ temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current; //further destructuring
 
     const {
         temperature_2m_max: [maxTemp],
@@ -36,6 +37,7 @@ function parseCurrentWeather({current, daily}) {
         precipitation_sum: [precip],
     } = daily;
 
+    //new anonymous obj returned
     return{
         currentTemp: Math.round(currentTemp),
         highTemp: Math.round(maxTemp),
@@ -47,6 +49,17 @@ function parseCurrentWeather({current, daily}) {
         iconCode,
 
     }
+}
+
+function parseDailyWeather({daily}){
+    return daily.time.map((time, index) => {
+        return {
+            timestamp: time*1000,
+            iconCode: daily.weathercode[index],
+            maxTemp: Math.round(daily.temperature_2m_max[index]),
+        }
+        
+    });
 }
 
 // flow 
