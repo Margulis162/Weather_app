@@ -12,8 +12,10 @@ getWeather( 10, 10,  Intl.DateTimeFormat().resolvedOptions().timeZone).then(rend
     alert("Error getting weather");
 })
 
-function renderWeather(current, daily, hourly){
-    renderCurrentWeather(current);
+function renderWeather(data){ 
+    // const {current, daily, hourly} = data;
+    // renderCurrentWeather({current});
+    renderCurrentWeather(data.current);
     // renderDailyWather(daily);
     // renderHourlyWeather(hourly);
     document.body.classList.remove("blurred");
@@ -24,19 +26,20 @@ function setValue(selector, value, {parent = document} ={}){
 }
 
 function getIconUrl(iconCode){
+    
     return `icons/${ICON_MAP.get(iconCode)}.svg`
 }
 
 function  renderCurrentWeather(current){
-    currentIcon.src = getIconUrl(current.current.iconCode);
-    setValue("current-temp", current.current.currentTemp);
-    setValue("current-high", current.current.highTemp);
-    setValue("current-low", current.current.lowTemp);
-    setValue("current-fl-high", current.current.highFeelsLike);
-    setValue("current-fl-low", current.current.lowFeelsLike);
-    setValue("current-wind", current.current.windSpeed);
-    setValue("current-precip", current.current.precip);
-    console.log(current)
+    currentIcon.src = getIconUrl(current.iconCode);
+    setValue("current-temp", current.currentTemp);
+    setValue("current-high", current.highTemp);
+    setValue("current-low", current.lowTemp);
+    setValue("current-fl-high", current.highFeelsLike);
+    setValue("current-fl-low", current.lowFeelsLike);
+    setValue("current-wind", current.windSpeed);
+    setValue("current-precip", current.precip);
+    
     // document.querySelector("[data-current-temp]").textContent = current.current.currentTemp;
     // console.log(current.currentTemp)
 }
