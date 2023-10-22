@@ -22,6 +22,7 @@ body #container {
 body #container #header {
   inline-size: 960px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   align-self: center;
 }
@@ -29,10 +30,9 @@ body #container #header #header-left {
   display: flex;
   inline-size: 50%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-right: 5px solid rgb(122, 71, 34);
 }
 body #container #header #header-right {
   display: grid;
@@ -43,12 +43,10 @@ body #container #header #header-right {
   grid-template-rows: repeat(2, auto);
 }
 body #container .day-section {
-  display: grid;
+  display: flex;
   inline-size: 960px;
-  grid-template-columns: repeat(auto-fit, 75px);
-  gap: 0.5rem;
-  justify-content: space-around;
-  padding: 1rem;
+  justify-content: space-between;
+  margin-block: 25px;
 }
 
 .weather-icon {
@@ -77,14 +75,20 @@ body #container .day-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgb(24, 36, 66);
   border-radius: 0.25rem;
-  padding: 0.25rem;
+  inline-size: 70px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 .hour-section {
   inline-size: 960px;
-  margin-inline: auto;
+  block-size: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .hour-row {
@@ -103,6 +107,15 @@ body #container .day-section {
 
 .hour-row > td {
   padding: 0.25rem 0.5rem;
+}
+
+.hour-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hour-section::-webkit-scrollbar-thumb {
+  background-image: url(icons/scroll_bar_holder.svg);
+  height: 52px;
 }
 
 .label {
