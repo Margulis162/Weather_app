@@ -51,6 +51,8 @@ function renderDailyWeather(daily){
         const element = dayCardTemplate.content.cloneNode(true)
         setValue("temp", day.maxTemp, {parent: element});
         setValue("date", DAY_FORMATTER.format(day.timestamp), {parent: element});
+        element.querySelector("[data-icon]").src = getIconUrl(day.iconCode);
+        dailySelection.append(element);
     })}
   
 // flow 
