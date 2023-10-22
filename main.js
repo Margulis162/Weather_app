@@ -70,7 +70,6 @@ function renderDailyWeather(daily){
 
     function renderHourlyWeather(hourly){
         hourlySection.innerHTML = "";
-        console.log(hourlySection)
         hourly.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
             setValue("temp", hour.temp, {parent: element});

@@ -22,48 +22,55 @@
     color: abstract.$text_main;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     block-size: 100vh;
-    #header{
-      display: flex;
-      align-items:center;
-
-      #header-left{
-        display:flex;
-        inline-size: 50%;
+    #container{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      #header{
+        inline-size: 960px;
+        display: flex;
         align-items:center;
-        justify-content:center;
-        margin: .5rem;
-        padding: .5rem;
-        border-right: 5px solid abstract.$text_main; 
-
+        align-self: center;
+        #header-left{
+          display:flex;
+          inline-size: 50%;
+          align-items:center;
+          justify-content:center;
+          margin: .5rem;
+          padding: .5rem;
+          border-right: 5px solid abstract.$text_main; 
+          
+        }
+        
+        #header-right{
+          display:grid;
+          inline-size:50%;
+          justify-content: space-around;
+          gap: .5rem;
+          grid-template-columns: repeat(3, auto);
+          grid-template-rows: repeat(2, auto);
+        }
       }
       
-      #header-right{
-        display:grid;
-        inline-size:50%;
-        justify-content: space-around;
+      
+      .day-section{
+        display: grid;
+        inline-size:960px;
+        grid-template-columns: repeat(auto-fit, 75px); 
         gap: .5rem;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(2, auto);
+        justify-content: space-around;
+        padding: 1rem;
       }
     }
-    
-
-    .day-section{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 75px); 
-      gap: .5rem;
-      justify-content: center;
-      padding: 1rem;
     }
-  }
-  
-  
-  
-  
-  //  classes. header
-  
-  .weather-icon{
-    block-size: 40px;
+    
+    
+    
+    
+    //  classes. header
+    
+    .weather-icon{
+      block-size: 40px;
     inline-size:40px;
     object-fit: contain;
   }
@@ -99,7 +106,7 @@
   }
   
     // classes hour section (table)
-      section.hour-section{
+      .hour-section{
         inline-size: 960px;
         margin-inline:auto;
       }
