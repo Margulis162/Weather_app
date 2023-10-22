@@ -74,6 +74,11 @@ body .day-section {
   padding: 0.25rem;
 }
 
+section.hour-section {
+  inline-size: 960px;
+  margin-inline: auto;
+}
+
 .hour-row {
   inline-size: 100%;
   text-align: center;

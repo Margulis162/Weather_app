@@ -99,7 +99,10 @@
   }
   
     // classes hour section (table)
-
+      section.hour-section{
+        inline-size: 960px;
+        margin-inline:auto;
+      }
     .hour-row{
       inline-size:100%;
       text-align: center;

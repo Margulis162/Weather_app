@@ -9,7 +9,7 @@ const dailySection = document.querySelector("[data-day-section]");
 const dayCardTemplate = document.getElementById("day-card-template");
 const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
 
-const hourlySection = document.querySelector("[data-hour-section]");
+const hourlySection = document.querySelector("[data-hour-section]"); //tbody
 const hourRowTemplate = document.getElementById("hour-row-template");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"})
 
@@ -62,9 +62,9 @@ function renderDailyWeather(daily){
 
     function renderHourlyWeather(hourly){
         hourlySection.innerHTML = "";
+        console.log(hourlySection)
         hourly.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
-            console.log(element);
             setValue("temp", hour.maxTemp, {parent: element});
             setValue("fl-temp", hour.feelsLike, {parent: element});
             setValue("wind", hour.windSpeed, {parent: element});
