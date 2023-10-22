@@ -28,15 +28,17 @@ body #container #header {
 }
 body #container #header #header-left {
   display: flex;
-  inline-size: 50%;
+  inline-size: 30%;
   align-items: center;
   justify-content: flex-start;
   margin: 0.5rem;
+  margin-inline: 0;
   padding: 0.5rem;
+  padding-inline-start: 0;
 }
 body #container #header #header-right {
   display: grid;
-  inline-size: 50%;
+  inline-size: 30%;
   justify-content: space-around;
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
