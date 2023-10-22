@@ -74,17 +74,17 @@ body .day-section {
   padding: 0.25rem;
 }
 
-.hour-section {
+.hour-row {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
 }
 
-.hour-section {
+.hour-row {
   background-color: rgba(212, 163, 157, 0.3);
 }
 
-.hour-section:nth-child(even) {
+.hour-row:nth-child(even) {
   background-color: rgba(212, 163, 157, 0.6);
 }
 

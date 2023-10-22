@@ -100,17 +100,17 @@
   
     // classes hour section (table)
 
-    .hour-section{
+    .hour-row{
       inline-size:100%;
       text-align: center;
       border-spacing: 0;
     }
 
-    .hour-section{
+    .hour-row{
       background-color: abstract.$table_row_1;
     }
 
-    .hour-section:nth-child(even){
+    .hour-row:nth-child(even){
       background-color: abstract.$table_row_2;
     }
 
