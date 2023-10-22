@@ -4,7 +4,6 @@ import { getWeather } from "./weather.js"
 import { ICON_MAP } from "./iconmap.js"
 // const
 const currentIcon = document.querySelector("[data-current-icon]");
-
 const dailySection = document.querySelector("[data-day-section]");
 const dayCardTemplate = document.getElementById("day-card-template");
 const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
@@ -14,11 +13,20 @@ const hourRowTemplate = document.getElementById("hour-row-template");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"})
 
 // f(x)
-getWeather( 10, 10,  Intl.DateTimeFormat().resolvedOptions().timeZone).then(renderWeather
-).catch(err => {
-    console.error(err);
-    alert("Error getting weather");
-})
+navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
+
+function positionSuccess({coords}){
+    getWeather( coords.latitude, coords.longitude,  Intl.DateTimeFormat().resolvedOptions().timeZone).then(renderWeather
+        ).catch(err => {
+            console.error(err);
+            alert("Error getting weather");
+        })
+}
+
+function positionError(){
+    alert("Something went wrong with getting your location. Please allow us to use your location and refresh the page");
+}
+
 
 function renderWeather(data){ 
     // const {current, daily, hourly} = data;

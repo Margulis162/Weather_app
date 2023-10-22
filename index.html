@@ -320,6 +320,7 @@
         <div><span data-temp></span><span>&deg;</span></div>
       </div>
     </template>
+
     <!-- for hourly section  -->
     <template id="hour-row-template">
       <tr class="hour-row">
@@ -334,19 +335,19 @@
         </td>
         <td>
           <div class="info-group">
-            <img class="weather-icon" src="icons/fl-low.svg" />
+            <div class="label">Temp</div>
             <div><span data-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <img class="weather-icon" src="icons/fl-high.svg" />
+            <div class="label">FL Temp</div>
             <div><span data-fl-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <img class="weather-icon" src="icons/wind.svg" />
+            <div class="label">Wind</div>
             <div>
               <span data-wind></span><span class="value-sub-info">mph</span>
             </div>
@@ -354,13 +355,42 @@
         </td>
         <td>
           <div class="info-group">
-            <img class="weather-icon" src="icons/precip.svg" />
+            <div class="label">Precip</div>
             <div>
               <span data-precip></span><span class="value-sub-info">in</span>
             </div>
           </div>
         </td>
       </tr>
+        <!-- <td>
+          <div class="info-group">
+            <div class="label" data-day></div>
+            <div><span data-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label" data-day></div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label" data-day></div>
+            <div>
+              <span data-wind></span><span class="value-sub-info">mph</span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            
+            <div>
+              <span data-precip></span><span class="value-sub-info">in</span>
+            </div>
+          </div>
+        </td>
+      </tr> -->
       </template>
 
     <script type="module" src="/main.js"></script>
