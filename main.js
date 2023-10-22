@@ -5,11 +5,11 @@ import { ICON_MAP } from "./iconmap.js"
 // const
 const currentIcon = document.querySelector("[data-current-icon]");
 
-const dailySelection = document.querySelector("[data-day-section]");
+const dailySection = document.querySelector("[data-day-section]");
 const dayCardTemplate = document.getElementById("day-card-template");
 const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
 
-const hourlySelection = document.querySelector("[data-hour-section]");
+const hourlySection = document.querySelector("[data-hour-section]");
 const hourRowTemplate = document.getElementById("hour-row-template");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"})
 
@@ -51,17 +51,17 @@ function  renderCurrentWeather(current){
 }
 
 function renderDailyWeather(daily){
-    dailySelection.innerHTML = "";
+    dailySection.innerHTML = "";
     daily.forEach(day => {
         const element = dayCardTemplate.content.cloneNode(true)
         setValue("temp", day.maxTemp, {parent: element});
         setValue("date", DAY_FORMATTER.format(day.timestamp), {parent: element});
         element.querySelector("[data-icon]").src = getIconUrl(day.iconCode);
-        dailySelection.append(element);
+        dailySection.append(element);
     })}
 
     function renderHourlyWeather(hourly){
-        hourlySelection.innerHTML = "";
+        hourlySection.innerHTML = "";
         hourly.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
             console.log(element);
@@ -72,7 +72,7 @@ function renderDailyWeather(daily){
             setValue("day", DAY_FORMATTER.format(hour.timestamp), {parent: element});
             setValue("time", HOUR_FORMATTER.format(hour.timestamp), {parent: element});
             element.querySelector("[data-icon]").src = getIconUrl(hour.iconCode);
-            hourlySelection.append(element);
+            hourlySection.append(element);
         })}
       
   
