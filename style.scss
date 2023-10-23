@@ -119,7 +119,8 @@
         block-size: 520px;
         overflow-y: auto;
         overflow-x: hidden;
-        box-shadow: -3px -3px 20px abstract.$bright_cold_yellow;
+        border-radius: 5px;
+        box-shadow: -3px -3px 20px abstract.$bright_cold_yellow; //I kinda like this, but it only makes sense when there is a
       }
     .hour-row{
       inline-size:100%;
