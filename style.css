@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
-  color: rgb(122, 71, 34);
+  color: magenta;
   background-size: 100% auto;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   block-size: 100vh;
@@ -96,6 +96,7 @@ table {
   block-size: 520px;
   overflow-y: auto;
   overflow-x: hidden;
+  box-shadow: -3px -3px 20px rgba(255, 255, 154, 0.6);
 }
 
 .hour-row {
@@ -128,7 +129,7 @@ table {
 .label {
   font-weight: bold;
   font-size: 0.6rem;
-  color: rgb(24, 36, 66);
+  color: darkmagenta;
 }
 
 .value-sub-info {
@@ -138,7 +139,7 @@ table {
 
 .day-card-day {
   font-size: 0.75rem;
-  color: rgb(122, 71, 34);
+  color: magenta;
   margin-block-start: 0.5rem;
 }
 
