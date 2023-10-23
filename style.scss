@@ -19,7 +19,12 @@
   body{
     margin:0;
     background-color: abstract.$back;
+    background-image: url(images/bottom_back.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
     color: abstract.$text_main;
+    background-size: 100% auto;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     block-size: 100vh;
     #container{

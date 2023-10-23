@@ -10,7 +10,12 @@
 body {
   margin: 0;
   background-color: rgb(55, 11, 40);
+  background-image: url(images/bottom_back.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
   color: rgb(122, 71, 34);
+  background-size: 100% auto;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   block-size: 100vh;
 }
@@ -100,11 +105,11 @@ table {
 }
 
 .hour-row {
-  background-color: rgba(212, 163, 157, 0.3);
+  background-color: rgb(121, 60, 52);
 }
 
 .hour-row:nth-child(even) {
-  background-color: rgba(212, 163, 157, 0.6);
+  background-color: rgb(212, 163, 157);
 }
 
 .hour-row > td {
