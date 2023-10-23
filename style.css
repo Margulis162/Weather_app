@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
-  color: magenta;
+  color: rgb(255, 255, 154);
   background-size: 100% auto;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   block-size: 100vh;
@@ -81,9 +81,12 @@ body #container .day-section {
 .day-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-radius: 0.25rem;
-  inline-size: 70px;
+  block-size: 100px;
+  inline-size: 62px;
+  padding-block-end: 10px;
 }
 
 table {
@@ -97,6 +100,7 @@ table {
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 5px;
+  background-color: rgb(55, 11, 40);
   box-shadow: -3px -3px 20px rgba(255, 255, 154, 0.6);
 }
 
@@ -107,11 +111,11 @@ table {
 }
 
 .hour-row {
-  background-color: rgb(121, 60, 52);
+  background-color: rgba(255, 153, 113, 0.3);
 }
 
 .hour-row:nth-child(even) {
-  background-color: rgb(212, 163, 157);
+  background-color: rgba(255, 255, 154, 0.3);
 }
 
 .hour-row > td {
@@ -130,7 +134,7 @@ table {
 .label {
   font-weight: bold;
   font-size: 0.6rem;
-  color: darkmagenta;
+  color: cyan;
 }
 
 .value-sub-info {
@@ -140,7 +144,7 @@ table {
 
 .day-card-day {
   font-size: 0.75rem;
-  color: magenta;
+  color: cyan;
   margin-block-start: 0.5rem;
 }
 

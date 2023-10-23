@@ -104,9 +104,13 @@
   .day-card{
     display:flex;
     flex-direction: column;
+    // box-shadow: -3px -3px 20px abstract.$bright_cold_yellow;  so I can see 'em;
+    justify-content: space-around;
     align-items: center;
     border-radius: .25rem;
-    inline-size: 70px;
+    block-size:100px;
+    inline-size: 62px;
+    padding-block-end:10px;
   }
   
     // classes hour section (table)
@@ -120,6 +124,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         border-radius: 5px;
+        background-color: abstract.$back;
         box-shadow: -3px -3px 20px abstract.$bright_cold_yellow; //I kinda like this, but it only makes sense when there is a
       }
     .hour-row{
@@ -167,6 +172,6 @@
 
     .day-card-day{
       font-size: .75rem;
-      color: abstract.$text_main;
+      color: abstract.$text_support;
       margin-block-start: .5rem;
     }
