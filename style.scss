@@ -1,6 +1,15 @@
 // variableZ
 @use "abstract.scss";
 
+@font-face {
+  font-family: 'tektur';
+  src: url('fonts/tektur-variablefont_wdthwght-webfont.woff2') format('woff2'),
+       url('fonts/tektur-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 
 
 
@@ -18,15 +27,21 @@
 // main 
   body{
     margin:0;
+    block-size: 100vh;
+    background-size: 100% auto;
+
+    // background
     background-color: abstract.$back;
     background-image: url(images/bottom_back.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center bottom;
+
+    // typography
     color: abstract.$text_main;
-    background-size: 100% auto;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    block-size: 100vh;
+    font-family:'Tektur', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .05rem;
+
     #container{
       display:flex;
       flex-direction: column;

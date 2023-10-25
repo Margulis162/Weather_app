@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "tektur";
+  src: url("fonts/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"), url("fonts/tektur-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -9,15 +15,16 @@
 
 body {
   margin: 0;
+  block-size: 100vh;
+  background-size: 100% auto;
   background-color: rgb(55, 11, 40);
   background-image: url(images/bottom_back.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
   color: rgb(255, 255, 154);
-  background-size: 100% auto;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  block-size: 100vh;
+  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 0.05rem;
 }
 body #container {
   display: flex;
