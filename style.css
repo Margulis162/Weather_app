@@ -40,13 +40,29 @@ body #container #header {
 }
 body #container #header #header-left {
   display: flex;
-  inline-size: 30%;
+  inline-size: 40%;
   align-items: center;
   justify-content: flex-start;
   margin: 0.5rem;
   margin-inline: 0;
   padding: 0.5rem;
   padding-inline-start: 0;
+}
+body #container #header #header-left #toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(55, 11, 40);
+  block-size: 20px;
+  inline-size: 32px;
+  border-radius: 10px/10px;
+  box-shadow: inset 1px 1px 10px rgba(255, 0, 255, 0.4);
+}
+body #container #header #header-left #toggle #toggle-inner-circle {
+  block-size: 16px;
+  inline-size: 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 0, 255, 0.4);
 }
 body #container #header #header-right {
   display: grid;
