@@ -13,6 +13,11 @@
   overflow: hidden;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   margin: 0;
   block-size: 100vh;
@@ -42,13 +47,22 @@ body #container #header #header-left {
   display: flex;
   inline-size: 40%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   margin: 0.5rem;
   margin-inline: 0;
   padding: 0.5rem;
   padding-inline-start: 0;
 }
-body #container #header #header-left #toggle {
+body #container #header #header-left #toggle-parent {
+  display: flex;
+  flex-direction: row;
+  inline-size: 80px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  color: magenta;
+}
+body #container #header #header-left #toggle-parent #toggle {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -58,7 +72,7 @@ body #container #header #header-left #toggle {
   border-radius: 10px/10px;
   box-shadow: inset 1px 1px 10px rgba(255, 0, 255, 0.4);
 }
-body #container #header #header-left #toggle #toggle-inner-circle {
+body #container #header #header-left #toggle-parent #toggle #toggle-inner-circle {
   block-size: 16px;
   inline-size: 16px;
   border-radius: 8px;
