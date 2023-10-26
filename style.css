@@ -73,17 +73,17 @@ body #container #header #header-left #toggle-parent {
 body #container #header #header-left #toggle-parent #toggle {
   display: flex;
   align-items: center;
-  background-color: rgb(55, 11, 40);
+  background-color: rgb(32, 3, 23);
   block-size: 20px;
   inline-size: 32px;
   border-radius: 10px/10px;
-  box-shadow: inset 1px 1px 10px rgba(255, 0, 255, 0.4);
+  box-shadow: -1px -1px 2px rgba(255, 255, 154, 0.4);
 }
 body #container #header #header-left #toggle-parent #toggle #toggle-inner-circle {
   block-size: 16px;
   inline-size: 16px;
   border-radius: 8px;
-  background-color: rgba(255, 0, 255, 0.4);
+  background-color: rgb(55, 11, 40);
 }
 body #container #header #header-right {
   display: grid;

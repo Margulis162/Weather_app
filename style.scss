@@ -87,17 +87,17 @@
               #toggle{
                 display:flex;
                 align-items: center;
-                background-color: abstract.$back;
+                background-color: abstract.$back_darker;
                 block-size:20px;
                 inline-size: 32px;
                 border-radius: 10px/10px;
-                box-shadow:inset 1px 1px 10px abstract.$magenta_shadow;
+                box-shadow: -1px -1px 2px abstract.$bright_cold_yellow_shadow;
                   #toggle-inner-circle{
                     
                     block-size: 16px;
                     inline-size: 16px;
                     border-radius: 8px; 
-                    background-color: abstract.$magenta_shadow;                
+                    background-color: abstract.$back;                
                   }
               }
             }
