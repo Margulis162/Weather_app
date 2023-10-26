@@ -18,6 +18,14 @@
   flex-direction: column;
 }
 
+.toggle-f {
+  justify-self: flex-start;
+}
+
+.toggle-c {
+  justify-content: flex-end;
+}
+
 body {
   margin: 0;
   block-size: 100vh;
@@ -64,7 +72,6 @@ body #container #header #header-left #toggle-parent {
 }
 body #container #header #header-left #toggle-parent #toggle {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   background-color: rgb(55, 11, 40);
   block-size: 20px;

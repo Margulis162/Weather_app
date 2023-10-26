@@ -28,6 +28,14 @@
     flex-direction: column;
   }
 
+  .toggle-f{
+    justify-self: flex-start;
+  }
+
+  .toggle-c{
+    justify-content: flex-end;
+  }
+
 
 // main 
   body{
@@ -78,7 +86,6 @@
               color: abstract.$magenta;
               #toggle{
                 display:flex;
-                justify-content: flex-start;
                 align-items: center;
                 background-color: abstract.$back;
                 block-size:20px;
@@ -223,3 +230,6 @@
       color: abstract.$text_support;
       margin-block-start: .5rem;
     }
+
+    // TO DO:
+    // apply .column to all the appropriate elements

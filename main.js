@@ -10,7 +10,9 @@ const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
 
 const hourlySection = document.querySelector("[data-hour-section]"); //tbody
 const hourRowTemplate = document.getElementById("hour-row-template");
-const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"})
+const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
+
+const toggle = document.querySelector("[data-toggle-switch]");
 
 // f(x)
 navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
@@ -84,3 +86,6 @@ function renderDailyWeather(daily){
       
   
 // flow 
+toggle.addEventListener("click", () =>{
+    toggle.classList.toggle("toggle-c");
+})
