@@ -31,6 +31,7 @@ function positionError(){
 
 
 function renderWeather(data){ 
+    console.log(data);
     // const {current, daily, hourly} = data;
     // renderCurrentWeather({current});
     renderCurrentWeather(data.current);

@@ -31,7 +31,7 @@ export function getWeather( lat, lon, timezone){
 
 function parseCurrentWeather({current, daily}) { //destructuring obj getting two param out of it
 
-    const{  temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current; //further destructuring
+    const{  is_day: day, temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current; //further destructuring
 
     const {
         temperature_2m_max: [maxTemp],
@@ -43,6 +43,7 @@ function parseCurrentWeather({current, daily}) { //destructuring obj getting two
 
     //new anonymous obj returned
     return{
+        day: day,
         currentTemp: Math.round(currentTemp),
         highTemp: Math.round(maxTemp),
         lowTemp: Math.round(minTemp),
