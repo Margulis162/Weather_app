@@ -89,3 +89,4 @@ function renderDailyWeather(daily){
 toggle.addEventListener("click", () =>{
     toggle.classList.toggle("toggle-c");
 })
+

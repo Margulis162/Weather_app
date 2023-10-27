@@ -1,14 +1,18 @@
 import axios from "axios"
 // https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime&timezone=America%2FChicago
 
+// https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime
 
+// https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime
 
-// const
+// 
+const url_fahrenheit = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
 
+const url_celsius ="https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime"
 
 // f(x)
 export function getWeather( lat, lon, timezone){
-    return axios.get("https://api.open-meteo.com/v1/forecast?1&current=temperature_2m,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime", 
+    return axios.get(url_fahrenheit, 
     {
         params:{
             latitude: lat,
@@ -16,20 +20,18 @@ export function getWeather( lat, lon, timezone){
             timezone,
         }})
         .then(({data}) => {
-         
+            console.log(data);
             return {
-                
                 current: parseCurrentWeather(data),
                 daily: parseDailyWeather(data),
                 hourly: parseHourlyWeather(data),
-               
             }
         })
 };
 
 function parseCurrentWeather({current, daily}) { //destructuring obj getting two param out of it
 
-    const{ temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current; //further destructuring
+    const{  temperature_2m: currentTemp, windspeed_10m: windSpeed, weathercode: iconCode,} = current; //further destructuring
 
     const {
         temperature_2m_max: [maxTemp],
