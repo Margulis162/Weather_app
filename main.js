@@ -32,12 +32,12 @@ function positionError(){
 
 function renderWeather(data){ 
     console.log(data);
-    // const {current, daily, hourly} = data;
-    // renderCurrentWeather({current});
+    dayNight(data.current);
     renderCurrentWeather(data.current);
     renderDailyWeather(data.daily);
     renderHourlyWeather(data.hourly);
     document.body.classList.remove("blurred");
+
 }
 
 // helper function
@@ -46,7 +46,6 @@ function setValue(selector, value, {parent = document} ={}){
 }
 
 function getIconUrl(iconCode){
-    
     return `icons/${ICON_MAP.get(iconCode)}.svg`
 }
 
@@ -85,6 +84,11 @@ function renderDailyWeather(daily){
             hourlySection.append(element);
         })}
       
+    function dayNight(current){
+        if(current.day === 0){
+            //  here will be the code changing icons to the ones with moon when appropriate
+        }
+    }
   
 // flow 
 toggle.addEventListener("click", () =>{
