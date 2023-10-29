@@ -80,7 +80,10 @@ function renderDailyWeather(daily, current){
 
     function renderHourlyWeather(hourly, current ){
         hourlySection.innerHTML = "";
+
+        // ajust to increase the amount of rows displaied
         const chopped = hourly.slice(0, 10);
+        
         chopped.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
             setValue("temp", hour.temp, {parent: element});
