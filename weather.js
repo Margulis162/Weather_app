@@ -12,7 +12,7 @@ const url_celsius ="https://api.open-meteo.com/v1/forecast?&current=temperature_
 
 // f(x)
 export function getWeather( lat, lon, timezone){
-    return axios.get(url_celsius, 
+    return axios.get(url_fahrenheit, 
     {
         params:{
             latitude: lat,
