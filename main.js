@@ -16,7 +16,6 @@ const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
 const toggle = document.querySelector("[data-toggle-switch]");
 
 // f(x)
-navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
 
 function positionSuccess({coords}){
     getWeather( coords.latitude, coords.longitude,  Intl.DateTimeFormat().resolvedOptions().timeZone).then(renderWeather
@@ -24,9 +23,9 @@ function positionSuccess({coords}){
             console.error(err);
             alert("Error getting weather");
         })
-}
+    }
 
-function positionError(){
+    function positionError(){
     alert("Something went wrong with getting your location. Please allow us to use your location and refresh the page");
 }
 
@@ -77,10 +76,10 @@ function renderDailyWeather(daily, current){
         element.querySelector("[data-icon]").src = getIconUrl(day.iconCode, current.day);
         dailySection.append(element);
     })}
-
+    
     function renderHourlyWeather(hourly, current ){
         hourlySection.innerHTML = "";
-
+        
         // ajust to increase the amount of rows displaied
         const chopped = hourly.slice(0, 10);
         
@@ -101,9 +100,18 @@ function renderDailyWeather(daily, current){
             //  here will be the code changing icons to the ones with moon when appropriate
         }
     }
-  
-// flow 
-toggle.addEventListener("click", () =>{
-    toggle.classList.toggle("toggle-c");
-})
+    
+    // flow 
+    navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
 
+    toggle.addEventListener("click", () =>{
+        if(toggle.classList[0] === "toggle-f"){
+            toggle.classList.remove("toggle-f");
+            toggle.classList.add("toggle-c");
+        }else{
+            toggle.classList.remove("toggle-c");
+            toggle.classList.add("toggle-f");
+        }
+    })
+
+    
