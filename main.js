@@ -14,11 +14,15 @@ const hourRowTemplate = document.getElementById("hour-row-template");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
 
 const toggle = document.querySelector("[data-toggle-switch]");
+let url = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
+const url_fahrenheit = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
+
+const url_celsius ="https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime"
 
 // f(x)
 
 function positionSuccess({coords}){
-    getWeather( coords.latitude, coords.longitude,  Intl.DateTimeFormat().resolvedOptions().timeZone).then(renderWeather
+    getWeather( coords.latitude, coords.longitude,  Intl.DateTimeFormat().resolvedOptions().timeZone, url).then(renderWeather
         ).catch(err => {
             console.error(err);
             alert("Error getting weather");
@@ -108,9 +112,14 @@ function renderDailyWeather(daily, current){
         if(toggle.classList[0] === "toggle-f"){
             toggle.classList.remove("toggle-f");
             toggle.classList.add("toggle-c");
+            url = url_celsius;
+            navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
+
         }else{
             toggle.classList.remove("toggle-c");
             toggle.classList.add("toggle-f");
+            url = url_fahrenheit;
+            navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
         }
     })
 
