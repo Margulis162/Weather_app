@@ -80,7 +80,8 @@ function renderDailyWeather(daily, current){
 
     function renderHourlyWeather(hourly, current ){
         hourlySection.innerHTML = "";
-        hourly.forEach(hour => {
+        const chopped = hourly.slice(0, 10);
+        chopped.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
             setValue("temp", hour.temp, {parent: element});
             setValue("fl-temp", hour.feelsLike, {parent: element});
