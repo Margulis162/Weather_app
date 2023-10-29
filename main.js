@@ -1,7 +1,8 @@
 // import
 // import ".style.css"
 import { getWeather } from "./weather.js"
-import { ICON_MAP } from "./iconmap.js"
+import { ICON_MAP } from "./iconmap_day.js"
+import { ICON_MAP_NIGHT } from "./iconmap_night.js"
 // const
 const currentIcon = document.querySelector("[data-current-icon]");
 const dailySection = document.querySelector("[data-day-section]");
@@ -34,10 +35,9 @@ function renderWeather(data){
     console.log(data);
     dayNight(data.current);
     renderCurrentWeather(data.current);
-    renderDailyWeather(data.daily);
-    renderHourlyWeather(data.hourly);
+    renderDailyWeather(data.daily, data.current);
+    renderHourlyWeather(data.hourly, data.current);
     document.body.classList.remove("blurred");
-
 }
 
 // helper function
@@ -45,12 +45,20 @@ function setValue(selector, value, {parent = document} ={}){
     parent.querySelector(`[data-${selector}]`).textContent = value;
 }
 
-function getIconUrl(iconCode){
-    return `icons/${ICON_MAP.get(iconCode)}.svg`
+
+
+
+function getIconUrl(iconCode, day){
+    console.log(day);
+    if(day === 0){
+        return `icons/${ICON_MAP_NIGHT.get(iconCode)}.svg`
+    }else{
+        return `icons/${ICON_MAP.get(iconCode)}.svg`
+    }
 }
 
 function  renderCurrentWeather(current){
-    currentIcon.src = getIconUrl(current.iconCode);
+    currentIcon.src = getIconUrl(current.iconCode, current.day);
     setValue("current-temp", current.currentTemp);
     setValue("current-high", current.highTemp);
     setValue("current-low", current.lowTemp);
@@ -60,17 +68,17 @@ function  renderCurrentWeather(current){
     setValue("current-precip", current.precip);
 }
 
-function renderDailyWeather(daily){
+function renderDailyWeather(daily, current){
     dailySection.innerHTML = "";
     daily.forEach(day => {
         const element = dayCardTemplate.content.cloneNode(true)
         setValue("temp", day.maxTemp, {parent: element});
         setValue("date", DAY_FORMATTER.format(day.timestamp), {parent: element});
-        element.querySelector("[data-icon]").src = getIconUrl(day.iconCode);
+        element.querySelector("[data-icon]").src = getIconUrl(day.iconCode, current.day);
         dailySection.append(element);
     })}
 
-    function renderHourlyWeather(hourly){
+    function renderHourlyWeather(hourly, current ){
         hourlySection.innerHTML = "";
         hourly.forEach(hour => {
             const element = hourRowTemplate.content.cloneNode(true);
@@ -80,7 +88,7 @@ function renderDailyWeather(daily){
             setValue("precip", hour.precip, {parent: element});
             setValue("day", DAY_FORMATTER.format(hour.timestamp), {parent: element});
             setValue("time", HOUR_FORMATTER.format(hour.timestamp), {parent: element});
-            element.querySelector("[data-icon]").src = getIconUrl(hour.iconCode);
+            element.querySelector("[data-icon]").src = getIconUrl(hour.iconCode, current.day);
             hourlySection.append(element);
         })}
       
