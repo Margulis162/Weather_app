@@ -51,11 +51,14 @@ body {
 body #container {
   display: flex;
   align-items: center;
+  margin-inline: auto;
+  inline-size: 960px;
 }
 body #container #header {
-  inline-size: 960px;
+  inline-size: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   align-self: center;
 }
@@ -64,6 +67,7 @@ body #container #header #header-left {
   inline-size: 40%;
   align-items: center;
   justify-content: space-around;
+  min-inline-size: 400px;
   margin: 0.5rem;
   margin-inline: 0;
   padding: 0.5rem;
@@ -100,12 +104,14 @@ body #container #header #header-right {
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
+  min-inline-size: 400px;
 }
 body #container .day-section {
   display: flex;
-  inline-size: 960px;
+  inline-size: inherit;
   justify-content: space-between;
   margin-block: 25px;
+  flex-wrap: wrap;
 }
 
 .weather-icon {
@@ -137,8 +143,9 @@ body #container .day-section {
   align-items: center;
   border-radius: 0.25rem;
   block-size: 100px;
-  inline-size: 62px;
+  min-inline-size: 62px;
   padding-block-end: 10px;
+  margin-inline: 15px;
 }
 
 table {
@@ -147,7 +154,7 @@ table {
 }
 
 .hour-section {
-  inline-size: 960px;
+  inline-size: inherit;
   block-size: 540px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -159,9 +166,6 @@ table {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
-}
-
-.hour-row {
   background-color: rgba(255, 153, 113, 0.3);
 }
 
@@ -208,13 +212,19 @@ table {
     justify-content: space-around;
   }
 }
-@media screen and (max-width: 955px) {
-  #container {
-    inline-size: 100%;
+@media (max-width: 959px) {
+  body #container {
+    inline-size: 100vw;
   }
-  #container #header {
+  body #container #header {
     display: flex;
     flex-direction: column;
+  }
+  body #container .day-section {
+    justify-content: flex-start;
+  }
+  .hour-row > td {
+    padding: 0;
   }
 }
 
