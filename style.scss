@@ -23,10 +23,24 @@
     overflow: hidden;
   }
 
+
+
+        // flex
   .column{
     display:flex;
     flex-direction: column;
   }
+
+  .row{
+   display:flex;
+   flex-direction:row;
+  }
+
+  .just-self-center{
+    justify-self: center;
+  }
+
+
 
   .toggle-f{
     justify-self: flex-start;
@@ -57,7 +71,6 @@
 
     #container{
       display:flex;
-      flex-direction: column;
       align-items: center;
       #header{
         inline-size: 960px;
@@ -231,5 +244,20 @@
       margin-block-start: .5rem;
     }
 
-    // TO DO:
-    // apply .column to all the appropriate elements
+@media screen and (max-width: 960px) {
+  #container{
+    inline-size: 100%;
+    .day-section{
+      inline-size: 100%;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 955px) {
+  #container{
+    inline-size: 100%;
+    #header{
+      display: flex;
+      flex-direction: column;
+    }}}

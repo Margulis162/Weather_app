@@ -12,7 +12,11 @@ const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
 const hourlySection = document.querySelector("[data-hour-section]"); //tbody
 const hourRowTemplateImperial = document.getElementById("hour-row-template-imperial");
 const hourRowTemplateMetric = document.getElementById("hour-row-template-metric");
-const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
+
+
+const HOUR_FORMATTER_1 = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
+const HOUR_FORMATTER_2 = new Intl.DateTimeFormat(undefined, {hour: "numeric", hour12: false,});
+let current_hr_formatter = HOUR_FORMATTER_1;
 
 const toggle = document.querySelector("[data-toggle-switch]");
 const headerDegrees = document.querySelector("[data-header-degrees]");
@@ -51,13 +55,17 @@ function renderWeather(data){
     dayNight(data.current);
     renderCurrentWeather(data.current);
     renderDailyWeather(data.daily, data.current);
-    renderHourlyWeather(data.hourly, data.current, template);
+    renderHourlyWeather(data.hourly, data.current, template, current_hr_formatter,);
     document.body.classList.remove("blurred");
 }
 
 // helper function
 function setValue(selector, value, {parent = document} ={}){
     parent.querySelector(`[data-${selector}]`).textContent = value;
+}
+
+function setValueMetricHr(selector, value, {parent = document} ={}){
+    parent.querySelector(`[data-${selector}]`).textContent = value + "hr";
 }
 
 
@@ -92,10 +100,11 @@ function renderDailyWeather(daily, current){
         element.querySelector("[data-icon]").src = getIconUrl(day.iconCode, current.day);
         dailySection.append(element);
     })}
+
+  
     
-    function renderHourlyWeather(hourly, current, template){
+    function renderHourlyWeather(hourly, current, template, current_hr_formatter,){
         hourlySection.innerHTML = "";
-        
         // ajust to increase the amount of rows displaied
         const chopped = hourly.slice(0, 10);
         
@@ -106,7 +115,7 @@ function renderDailyWeather(daily, current){
             setValue("wind", hour.windSpeed, {parent: element});
             setValue("precip", hour.precip, {parent: element});
             setValue("day", DAY_FORMATTER.format(hour.timestamp), {parent: element});
-            setValue("time", HOUR_FORMATTER.format(hour.timestamp), {parent: element});
+            setValue("time", current_hr_formatter.format(hour.timestamp), {parent: element});
             element.querySelector("[data-icon]").src = getIconUrl(hour.iconCode, current.day);
             hourlySection.append(element);
         })}
@@ -133,6 +142,8 @@ function renderDailyWeather(daily, current){
             headerPercip.textContent = "cm";
 
             // hourly weather
+        
+            current_hr_formatter = HOUR_FORMATTER_2;
 
         }
         
@@ -147,9 +158,10 @@ function renderDailyWeather(daily, current){
             headerWind.textContent ="mph";
             headerPercip.textContent = "in";
 
-            // hourly weather
 
+            // hourly weather
+            current_hr_formatter = HOUR_FORMATTER_1;
         }
     })
 
-    
+   
