@@ -14,7 +14,13 @@ const hourRowTemplate = document.getElementById("hour-row-template");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
 
 const toggle = document.querySelector("[data-toggle-switch]");
+const headerDegrees = document.querySelector("[data-header-degrees]");
+const headerWind = document.querySelector("[data-header-wind]");
+const headerPercip = document.querySelector("[data-header-percip]");
+
+console.log(headerDegrees.textContent);
 let url = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
+
 const url_fahrenheit = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
 
 const url_celsius ="https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime"
@@ -107,7 +113,7 @@ function renderDailyWeather(daily, current){
     
     // flow 
     navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
-
+        //  to metric
     toggle.addEventListener("click", () =>{
         if(toggle.classList[0] === "toggle-f"){
             toggle.classList.remove("toggle-f");
@@ -115,11 +121,20 @@ function renderDailyWeather(daily, current){
             url = url_celsius;
             navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
 
+            // header
+            headerDegrees.textContent = `\u00B0C`;
+            headerWind.textContent ="km/s";
+            headerPercip.textContent = "cm";
+            // to imperial
         }else{
             toggle.classList.remove("toggle-c");
             toggle.classList.add("toggle-f");
             url = url_fahrenheit;
             navigator.geolocation.getCurrentPosition(positionSuccess, positionError);
+            // header 
+            headerDegrees.textContent = `\u00B0F`;
+            headerWind.textContent ="mph";
+            headerPercip.textContent = "in";
         }
     })
 
