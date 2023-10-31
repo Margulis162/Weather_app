@@ -10,7 +10,8 @@ const dayCardTemplate = document.getElementById("day-card-template");
 const DAY_FORMATTER = new Intl.DateTimeFormat(undefined, {weekday: "long"})
 
 const hourlySection = document.querySelector("[data-hour-section]"); //tbody
-const hourRowTemplate = document.getElementById("hour-row-template");
+const hourRowTemplateImperial = document.getElementById("hour-row-template-imperial");
+const hourRowTemplateMetric = document.getElementById("hour-row-template-metric");
 const HOUR_FORMATTER = new Intl.DateTimeFormat(undefined, {hour: "numeric"});
 
 const toggle = document.querySelector("[data-toggle-switch]");
@@ -18,7 +19,6 @@ const headerDegrees = document.querySelector("[data-header-degrees]");
 const headerWind = document.querySelector("[data-header-wind]");
 const headerPercip = document.querySelector("[data-header-percip]");
 
-console.log(headerDegrees.textContent);
 let url = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
 
 const url_fahrenheit = "https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timeformat=unixtime";
@@ -41,11 +41,17 @@ function positionSuccess({coords}){
 
 
 function renderWeather(data){ 
+    let template;
+    if(toggle.classList[0] === "toggle-f"){
+        template = hourRowTemplateImperial;
+    }else{
+        template = hourRowTemplateMetric;
+    }
     console.log(data);
     dayNight(data.current);
     renderCurrentWeather(data.current);
     renderDailyWeather(data.daily, data.current);
-    renderHourlyWeather(data.hourly, data.current);
+    renderHourlyWeather(data.hourly, data.current, template);
     document.body.classList.remove("blurred");
 }
 
@@ -87,14 +93,14 @@ function renderDailyWeather(daily, current){
         dailySection.append(element);
     })}
     
-    function renderHourlyWeather(hourly, current ){
+    function renderHourlyWeather(hourly, current, template){
         hourlySection.innerHTML = "";
         
         // ajust to increase the amount of rows displaied
         const chopped = hourly.slice(0, 10);
         
         chopped.forEach(hour => {
-            const element = hourRowTemplate.content.cloneNode(true);
+            const element = template.content.cloneNode(true);
             setValue("temp", hour.temp, {parent: element});
             setValue("fl-temp", hour.feelsLike, {parent: element});
             setValue("wind", hour.windSpeed, {parent: element});
@@ -125,8 +131,13 @@ function renderDailyWeather(daily, current){
             headerDegrees.textContent = `\u00B0C`;
             headerWind.textContent ="km/s";
             headerPercip.textContent = "cm";
-            // to imperial
-        }else{
+
+            // hourly weather
+
+        }
+        
+         // to imperial
+        else{
             toggle.classList.remove("toggle-c");
             toggle.classList.add("toggle-f");
             url = url_fahrenheit;
@@ -135,6 +146,9 @@ function renderDailyWeather(daily, current){
             headerDegrees.textContent = `\u00B0F`;
             headerWind.textContent ="mph";
             headerPercip.textContent = "in";
+
+            // hourly weather
+
         }
     })
 

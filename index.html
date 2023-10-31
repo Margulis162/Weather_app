@@ -334,8 +334,8 @@
       </div>
     </template>
     
-    <!-- for hourly section  -->
-    <template id="hour-row-template">
+    <!-- for hourly section in Fahrenheits -->
+    <template id="hour-row-template-imperial">
       <tr class="hour-row">
         <td>
           <div class="info-group">
@@ -371,6 +371,50 @@
             <div class="label">Precip</div>
             <div>
               <span data-precip></span><span class="value-sub-info">in</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+       
+    </template>
+
+    <!-- for metric -->
+    <template id="hour-row-template-metric">
+      <tr class="hour-row">
+        <td>
+          <div class="info-group">
+            <div class="label" data-day></div>
+            <div data-time></div>
+          </div>
+        </td>
+        <td>
+          <img data-icon class="weather-icon" />
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Temp</div>
+            <div><span data-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">FL Temp</div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Wind</div>
+            <div>
+              <span data-wind></span><span class="value-sub-info">km/s</span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Precip</div>
+            <div>
+              <span data-precip></span><span class="value-sub-info">cm</span>
             </div>
           </div>
         </td>
