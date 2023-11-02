@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 .blurred {
   filter: blur(5px);
   overflow: hidden;
@@ -40,10 +44,6 @@ body {
   block-size: 100vh;
   background-size: 100% auto;
   background-color: rgb(55, 11, 40);
-  background-image: url(images/bottom_back.svg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center bottom;
   color: rgb(255, 255, 154);
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0.05rem;
@@ -52,7 +52,7 @@ body #container {
   display: flex;
   align-items: center;
   margin-inline: auto;
-  inline-size: 960px;
+  inline-size: 96rem;
 }
 body #container #header {
   inline-size: 100%;
@@ -64,19 +64,18 @@ body #container #header {
 }
 body #container #header #header-left {
   display: flex;
-  inline-size: 40%;
+  inline-size: 30rem;
   align-items: center;
-  justify-content: space-around;
-  min-inline-size: 400px;
-  margin: 0.5rem;
-  margin-inline: 0;
+  justify-content: flex-start;
+  margin-block: 3rem;
   padding: 0.5rem;
   padding-inline-start: 0;
+  min-inline-size: 46rem;
 }
 body #container #header #header-left #toggle-parent {
   display: flex;
   flex-direction: row;
-  inline-size: 80px;
+  inline-size: 8rem;
   justify-content: space-around;
   align-items: center;
   font-size: 1rem;
@@ -104,7 +103,7 @@ body #container #header #header-right {
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
-  min-inline-size: 400px;
+  min-inline-size: 50rem;
 }
 body #container .day-section {
   display: flex;
@@ -218,13 +217,21 @@ table {
   }
   body #container #header {
     display: flex;
-    flex-direction: column;
   }
-  body #container .day-section {
-    justify-content: flex-start;
+  body #container #header #header-left {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+  body #container #header #header-right {
+    flex-grow: 1;
   }
   .hour-row > td {
     padding: 0;
+  }
+}
+@media (max-width: 790px) {
+  body #container .day-section {
+    justify-content: flex-start;
   }
 }
 

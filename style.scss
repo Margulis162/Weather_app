@@ -17,6 +17,10 @@
 *, *::before, *::after{
     box-sizing:border-box;
   }
+
+html{
+  font-size:10px;
+}
   
   .blurred {
     filter: blur(5px);
@@ -59,10 +63,10 @@
 
     // background
     background-color: abstract.$back;
-    background-image: url(images/bottom_back.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
+    // background-image: url(images/bottom_back.svg);
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center bottom;
 
     // typography
     color: abstract.$text_main;
@@ -73,7 +77,7 @@
       display:flex;
       align-items: center;
       margin-inline: auto;
-      inline-size: 960px;
+      inline-size: 96rem;
       #header{
         inline-size: 100%;
         display: flex;
@@ -81,22 +85,23 @@
         flex-wrap: wrap;
         align-items:center;
         align-self: center;
+        
         #header-left{
           display:flex;
-          inline-size: 40%;
+          inline-size: 30rem;
           align-items:center;
-          justify-content:space-around;
-          min-inline-size: 400px;
-          margin: .5rem;
-          margin-inline: 0;
+          justify-content:flex-start;
+          margin-block: 3rem;
           padding: .5rem;
           padding-inline-start: 0;
+          min-inline-size: 46rem;
+
           .header-current-temp{
           }
             #toggle-parent{
               display:flex;
               flex-direction:row;
-              inline-size: 80px ;
+              inline-size: 8rem ;
               justify-content: space-around;
               align-items: center;
               font-size: 1rem;
@@ -128,7 +133,7 @@
           gap: .5rem;
           grid-template-columns: repeat(3, auto);
           grid-template-rows: repeat(2, auto);
-          min-inline-size: 400px;
+          min-inline-size: 50rem;
         }
       }
       
@@ -266,11 +271,19 @@
         inline-size: 100vw;
           #header{
               display: flex;
-              flex-direction: column;
+
+              #header-left{
+                flex-grow: 1;
+                justify-content: space-around;
+              }
+              #header-right{
+                // inline-size: 100%;
+                flex-grow: 1;
+              }
               }
 
               .day-section{
-                justify-content: flex-start;
+                // justify-content: flex-start;
               }
             }
           }
@@ -278,7 +291,20 @@
             padding: 0;
           }
       
-          
-          
+       
     
+  }
+
+  @media  (max-width: 790px){
+
+    
+    body #container .day-section{
+      
+       
+
+            
+              justify-content: flex-start;
+            
+          }
+
   }
