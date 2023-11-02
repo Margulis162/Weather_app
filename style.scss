@@ -96,8 +96,6 @@ html{
           padding-inline-start: 0;
           min-inline-size: 46rem;
 
-          .header-current-temp{
-          }
             #toggle-parent{
               display:flex;
               flex-direction:row;
@@ -200,11 +198,11 @@ html{
     }
       .hour-section{
         inline-size: inherit;
-        block-size: 540px;
+        // block-size: 540px;
         overflow-y: auto;
         overflow-x: hidden;
         border-radius: 5px;
-        background-color: abstract.$back;
+        // background-color: abstract.$back;
         
       }
     .hour-row{
@@ -282,9 +280,7 @@ html{
               }
               }
 
-              .day-section{
-                // justify-content: flex-start;
-              }
+              
             }
           }
           .hour-row > td {
@@ -296,15 +292,17 @@ html{
   }
 
   @media  (max-width: 790px){
+    body #container  #header   #header-left{
+      min-inline-size: 0;
+    }
 
-    
+
+    body #container  #header   #header-right{
+      min-inline-size: 0;
+    }
+
     body #container .day-section{
-      
-       
-
-            
               justify-content: flex-start;
-            
           }
 
   }

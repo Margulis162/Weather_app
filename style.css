@@ -154,11 +154,9 @@ table {
 
 .hour-section {
   inline-size: inherit;
-  block-size: 540px;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 5px;
-  background-color: rgb(55, 11, 40);
 }
 
 .hour-row {
@@ -230,6 +228,12 @@ table {
   }
 }
 @media (max-width: 790px) {
+  body #container #header #header-left {
+    min-inline-size: 0;
+  }
+  body #container #header #header-right {
+    min-inline-size: 0;
+  }
   body #container .day-section {
     justify-content: flex-start;
   }
