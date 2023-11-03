@@ -4,7 +4,9 @@
   font-weight: normal;
   font-style: normal;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -27,34 +29,25 @@ html {
   flex-direction: row;
 }
 
-.just-self-center {
-  justify-self: center;
-}
-
-.toggle-f {
-  justify-self: flex-start;
-}
-
-.toggle-c {
-  justify-content: flex-end;
-}
-
 body {
   margin: 0;
   block-size: 100vh;
-  background-size: 100% auto;
-  background-color: rgb(55, 11, 40);
+  background-color: rgb(200, 150, 200);
   color: rgb(255, 255, 154);
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.1rem;
 }
 body #container {
   display: flex;
   align-items: center;
   margin-inline: auto;
   inline-size: 96rem;
+  background-color: rgb(200, 150, 200);
+  box-shadow: -5px 0px 5px rgb(223, 176, 223), 5px 0px 5px rgb(170, 117, 170);
+  border-radius: 2rem;
+  block-size: 100vh;
 }
-body #container #header {
+body #container header {
   inline-size: 100%;
   display: flex;
   justify-content: space-between;
@@ -62,7 +55,7 @@ body #container #header {
   align-items: center;
   align-self: center;
 }
-body #container #header #header-left {
+body #container header #header-left {
   display: flex;
   inline-size: 30rem;
   align-items: center;
@@ -72,7 +65,7 @@ body #container #header #header-left {
   padding-inline-start: 0;
   min-inline-size: 46rem;
 }
-body #container #header #header-left #toggle-parent {
+body #container header #header-left #toggle-parent {
   display: flex;
   flex-direction: row;
   inline-size: 8rem;
@@ -81,7 +74,13 @@ body #container #header #header-left #toggle-parent {
   font-size: 1rem;
   color: magenta;
 }
-body #container #header #header-left #toggle-parent #toggle {
+body #container header #header-left #toggle-parent .toggle-f {
+  justify-self: flex-start;
+}
+body #container header #header-left #toggle-parent .toggle-c {
+  justify-content: flex-end;
+}
+body #container header #header-left #toggle-parent #toggle {
   display: flex;
   align-items: center;
   background-color: rgb(32, 3, 23);
@@ -90,13 +89,13 @@ body #container #header #header-left #toggle-parent #toggle {
   border-radius: 10px/10px;
   box-shadow: -1px -1px 2px rgba(255, 255, 154, 0.4);
 }
-body #container #header #header-left #toggle-parent #toggle #toggle-inner-circle {
+body #container header #header-left #toggle-parent #toggle #toggle-inner-circle {
   block-size: 16px;
   inline-size: 16px;
   border-radius: 8px;
-  background-color: rgb(55, 11, 40);
+  background-color: rgb(200, 150, 200);
 }
-body #container #header #header-right {
+body #container header #header-right {
   display: grid;
   inline-size: 30%;
   justify-content: space-around;
@@ -111,6 +110,10 @@ body #container .day-section {
   justify-content: space-between;
   margin-block: 25px;
   flex-wrap: wrap;
+}
+body #container footer {
+  flex-grow: 1;
+  min-block-size: 5rem;
 }
 
 .weather-icon {
@@ -212,14 +215,14 @@ table {
   body #container {
     inline-size: 100vw;
   }
-  body #container #header {
+  body #container header {
     display: flex;
   }
-  body #container #header #header-left {
+  body #container header #header-left {
     flex-grow: 1;
     justify-content: space-around;
   }
-  body #container #header #header-right {
+  body #container header #header-right {
     flex-grow: 1;
   }
   .hour-row > td {
@@ -227,10 +230,10 @@ table {
   }
 }
 @media (max-width: 790px) {
-  body #container #header #header-left {
+  body #container header #header-left {
     min-inline-size: 0;
   }
-  body #container #header #header-right {
+  body #container header #header-right {
     min-inline-size: 0;
   }
   body #container .day-section {

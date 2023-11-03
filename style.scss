@@ -1,308 +1,290 @@
-// variableZ
+// variables & imports
 @use "abstract.scss";
 
 @font-face {
-  font-family: 'tektur';
-  src: url('fonts/tektur-variablefont_wdthwght-webfont.woff2') format('woff2'),
-       url('fonts/tektur-variablefont_wdthwght-webfont.woff') format('woff');
+  font-family: "tektur";
+  src: url("fonts/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("fonts/tektur-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
-
-
-
 
 // general
-*, *::before, *::after{
-    box-sizing:border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html{
-  font-size:10px;
+  font-size: 10px;
 }
-  
-  .blurred {
-    filter: blur(5px);
-    overflow: hidden;
-  }
+
+// to blur placeholders while fetching content
+.blurred {             
+  filter: blur(5px);
+  overflow: hidden;
+}
+
+// flex classes for potential future use(at list one instance exists);
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
 
 
+// main
+body {
+  margin: 0;
+  block-size: 100vh;
+  background-color: abstract.$main;
 
-        // flex
-  .column{
-    display:flex;
-    flex-direction: column;
-  }
-
-  .row{
-   display:flex;
-   flex-direction:row;
-  }
-
-  .just-self-center{
-    justify-self: center;
-  }
-
-
-
-  .toggle-f{
-    justify-self: flex-start;
-  }
-
-  .toggle-c{
-    justify-content: flex-end;
-  }
-
-
-// main 
-  body{
-    margin:0;
-    block-size: 100vh;
-    background-size: 100% auto;
-
-    // background
-    background-color: abstract.$back;
-    // background-image: url(images/bottom_back.svg);
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-position: center bottom;
-
-    // typography
-    color: abstract.$text_main;
-    font-family:'Tektur', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    letter-spacing: .05rem;
-
-    #container{
-      display:flex;
-      align-items: center;
-      margin-inline: auto;
-      inline-size: 96rem;
-      #header{
-        inline-size: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items:center;
-        align-self: center;
-        
-        #header-left{
-          display:flex;
-          inline-size: 30rem;
-          align-items:center;
-          justify-content:flex-start;
-          margin-block: 3rem;
-          padding: .5rem;
-          padding-inline-start: 0;
-          min-inline-size: 46rem;
-
-            #toggle-parent{
-              display:flex;
-              flex-direction:row;
-              inline-size: 8rem ;
-              justify-content: space-around;
-              align-items: center;
-              font-size: 1rem;
-              color: abstract.$magenta;
-              #toggle{
-                display:flex;
-                align-items: center;
-                background-color: abstract.$back_darker;
-                block-size:20px;
-                inline-size: 32px;
-                border-radius: 10px/10px;
-                box-shadow: -1px -1px 2px abstract.$bright_cold_yellow_shadow;
-                  #toggle-inner-circle{
-                    
-                    block-size: 16px;
-                    inline-size: 16px;
-                    border-radius: 8px; 
-                    background-color: abstract.$back;                
-                  }
-              }
-            }
-          
-        }
-        
-        #header-right{
-          display:grid;
-          inline-size:30%;
-          justify-content: space-around;
-          gap: .5rem;
-          grid-template-columns: repeat(3, auto);
-          grid-template-rows: repeat(2, auto);
-          min-inline-size: 50rem;
-        }
-      }
-      
-      
-      .day-section{
-        display: flex;
-        inline-size:inherit;
-        justify-content: space-between;
-        margin-block:25px;
-        flex-wrap: wrap;
-      }
-    }
-    }
-    
-    
-    
-    
-    //  classes. header
-    
-    .weather-icon{
-      block-size: 40px;
-    inline-size:40px;
-    object-fit: contain;
-  }
-  
-  
-  .weather-icon.large{
-    block-size: 180px;
-    inline-size:180px;
-  }
-
-  .header-current-temp{
-    font-size:2rem;
-    margin-inline-start: 1rem;
-  }
-  
-  
-  .info-group{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-  }
-  
-
-  // classes day section
-
-  .day-card{
-    display:flex;
-    flex-direction: column;
-    // box-shadow: -3px -3px 20px abstract.$bright_cold_yellow;  so I can see 'em;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: .25rem;
-    block-size:100px;
-    min-inline-size: 62px;
-    padding-block-end:10px;
-    margin-inline: 15px;
-  }
-  
-    // classes hour section (table)
-    table {
-      table-layout: fixed;
-      border-collapse: collapse;
-    }
-      .hour-section{
-        inline-size: inherit;
-        // block-size: 540px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        // border-radius: 5px;
-        // background-color: abstract.$back;
-        
-      }
-    .hour-row{
-      inline-size:100%;
-      text-align: center;
-      border-spacing: 0;
-      background-color: abstract.$table_row_1;
-    }
-
-  
-
-    .hour-row:nth-child(even){
-      background-color: abstract.$table_row_2;
-    }
-
-    .hour-row > td {
-      padding: .25rem .5rem;
-    }
-
-    // scroll bar
-    .hour-section::-webkit-scrollbar {
-      width: 8px;
-      
-    }
-    .hour-section::-webkit-scrollbar-thumb {
-      background-image: url(icons/scroll_bar_holder.svg);
-      height: 52px;
-    }
-    
-    
-
+  // background-size: 100% auto;
+  // background
+  // background-image: url(images/bottom_back.svg);
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: center bottom;
 
   // typography
-  .label{
-    font-weight: bold;
-    font-size: .6rem;
-    color:abstract.$text_support;
-  }
+  color: abstract.$text_main;
+  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 0.1rem;
 
-  .value-sub-info{
-    font-weight: lighter;
-    font-size: .75rem;
-  }
+  #container {
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    inline-size: 96rem;
+    background-color: abstract.$main;
+    box-shadow: -5px 0px 5px abstract.$main_light, 5px 0px 5px abstract.$main_dark;
+    border-radius: 2rem;
+    block-size: 100vh;
+    header {
+      inline-size: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      align-self: center;
+      
 
-    .day-card-day{
-      font-size: .75rem;
-      color: abstract.$text_support;
-      margin-block-start: .5rem;
+      #header-left {
+        display: flex;
+        inline-size: 30rem;
+        align-items: center;
+        justify-content: flex-start;
+        margin-block: 3rem;
+        padding: 0.5rem;
+        padding-inline-start: 0;
+        min-inline-size: 46rem;
+
+        #toggle-parent {
+          display: flex;
+          flex-direction: row;
+          inline-size: 8rem;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 1rem;
+          color: abstract.$magenta;
+
+          // two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch 
+          .toggle-f {
+            justify-self: flex-start;
+          }
+          .toggle-c {
+            justify-content: flex-end;
+          }
+
+          #toggle {
+            display: flex;
+            align-items: center;
+            background-color: abstract.$back_darker;
+            block-size: 20px;
+            inline-size: 32px;
+            border-radius: 10px/10px;
+            box-shadow: -1px -1px 2px abstract.$bright_cold_yellow_shadow;
+
+         
+            
+            #toggle-inner-circle {
+              block-size: 16px;
+              inline-size: 16px;
+              border-radius: 8px;
+              background-color: abstract.$main;
+            }
+          }
+        }
+      }
+
+      #header-right {
+        display: grid;
+        inline-size: 30%;
+        justify-content: space-around;
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        min-inline-size: 50rem;
+      }
     }
 
+    .day-section {
+      display: flex;
+      inline-size: inherit;
+      justify-content: space-between;
+      margin-block: 25px;
+      flex-wrap: wrap;
+    }
+    footer{
+      flex-grow: 1;
+      min-block-size: 5rem;
+    }
+  }
+}
+
+//  classes. header
+
+.weather-icon {
+  block-size: 40px;
+  inline-size: 40px;
+  object-fit: contain;
+}
+
+.weather-icon.large {
+  block-size: 180px;
+  inline-size: 180px;
+}
+
+.header-current-temp {
+  font-size: 2rem;
+  margin-inline-start: 1rem;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// classes day section
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  // box-shadow: -3px -3px 20px abstract.$bright_cold_yellow;  so I can see 'em;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.25rem;
+  block-size: 100px;
+  min-inline-size: 62px;
+  padding-block-end: 10px;
+  margin-inline: 15px;
+}
+
+// classes hour section (table)
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.hour-section {
+  inline-size: inherit;
+  // block-size: 540px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // border-radius: 5px;
+  // background-color: abstract.$back;
+}
+.hour-row {
+  inline-size: 100%;
+  text-align: center;
+  border-spacing: 0;
+  background-color: abstract.$table_row_1;
+}
+
+.hour-row:nth-child(even) {
+  background-color: abstract.$table_row_2;
+}
+
+.hour-row > td {
+  padding: 0.25rem 0.5rem;
+}
+
+// scroll bar
+.hour-section::-webkit-scrollbar {
+  width: 8px;
+}
+.hour-section::-webkit-scrollbar-thumb {
+  background-image: url(icons/scroll_bar_holder.svg);
+  height: 52px;
+}
+
+// typography
+.label {
+  font-weight: bold;
+  font-size: 0.6rem;
+  color: abstract.$text_support;
+}
+
+.value-sub-info {
+  font-weight: lighter;
+  font-size: 0.75rem;
+}
+
+.day-card-day {
+  font-size: 0.75rem;
+  color: abstract.$text_support;
+  margin-block-start: 0.5rem;
+}
+
 @media screen and (max-width: 960px) {
-  #container{
+  #container {
     inline-size: 100%;
-    .day-section{
+    .day-section {
       inline-size: 100%;
       justify-content: space-around;
     }
   }
 }
 
-@media  (max-width: 959px) {
-  body{
-     #container{
-        inline-size: 100vw;
-          #header{
-              display: flex;
+@media (max-width: 959px) {
+  body {
+    #container {
+      inline-size: 100vw;
+      header {
+        display: flex;
 
-              #header-left{
-                flex-grow: 1;
-                justify-content: space-around;
-              }
-              #header-right{
-                // inline-size: 100%;
-                flex-grow: 1;
-              }
-              }
+        #header-left {
+          flex-grow: 1;
+          justify-content: space-around;
+        }
+        #header-right {
+          // inline-size: 100%;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+  .hour-row > td {
+    padding: 0;
+  }
+}
 
-              
-            }
-          }
-          .hour-row > td {
-            padding: 0;
-          }
-      
-       
-    
+@media (max-width: 790px) {
+  body #container header #header-left {
+    min-inline-size: 0;
   }
 
-  @media  (max-width: 790px){
-    body #container  #header   #header-left{
-      min-inline-size: 0;
-    }
-
-
-    body #container  #header   #header-right{
-      min-inline-size: 0;
-    }
-
-    body #container .day-section{
-              justify-content: flex-center;
-          }
-
+  body #container header #header-right {
+    min-inline-size: 0;
   }
+
+  body #container .day-section {
+    justify-content: flex-center;
+  }
+}
