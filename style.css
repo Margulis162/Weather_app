@@ -156,7 +156,6 @@ table {
   inline-size: inherit;
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 5px;
 }
 
 .hour-row {
@@ -235,7 +234,7 @@ table {
     min-inline-size: 0;
   }
   body #container .day-section {
-    justify-content: flex-start;
+    justify-content: flex-center;
   }
 }
 
