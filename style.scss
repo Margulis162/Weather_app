@@ -63,7 +63,7 @@ body {
     margin-inline: auto;
     inline-size: 96rem;
     background-color: abstract.$main;
-    box-shadow: -5px 0px 5px abstract.$main_light, 5px 0px 5px abstract.$main_dark;
+    box-shadow: -10px 0px 10px abstract.$main_light, 10px 0px 10px abstract.$main_dark;
     border-radius: 2rem;
     block-size: 100vh;
     header {
@@ -105,7 +105,7 @@ body {
           #toggle {
             display: flex;
             align-items: center;
-            background-color: abstract.$back_darker;
+            background-color: abstract.$main_dark;
             block-size: 20px;
             inline-size: 32px;
             border-radius: 10px/10px;
@@ -204,11 +204,11 @@ table {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
-  background-color: abstract.$table_row_1;
+  background-color: abstract.$main_dark;
 }
 
 .hour-row:nth-child(even) {
-  background-color: abstract.$table_row_2;
+  background-color: abstract.$main;
 }
 
 .hour-row > td {
@@ -285,6 +285,6 @@ table {
   }
 
   body #container .day-section {
-    justify-content: flex-center;
+    justify-content: center;
   }
 }

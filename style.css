@@ -32,7 +32,7 @@ html {
 body {
   margin: 0;
   block-size: 100vh;
-  background-color: rgb(200, 150, 200);
+  background-color: rgb(220, 220, 220);
   color: rgb(255, 255, 154);
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0.1rem;
@@ -42,8 +42,8 @@ body #container {
   align-items: center;
   margin-inline: auto;
   inline-size: 96rem;
-  background-color: rgb(200, 150, 200);
-  box-shadow: -5px 0px 5px rgb(223, 176, 223), 5px 0px 5px rgb(170, 117, 170);
+  background-color: rgb(220, 220, 220);
+  box-shadow: -10px 0px 10px rgb(230, 230, 230), 10px 0px 10px rgb(200, 200, 200);
   border-radius: 2rem;
   block-size: 100vh;
 }
@@ -93,7 +93,7 @@ body #container header #header-left #toggle-parent #toggle #toggle-inner-circle 
   block-size: 16px;
   inline-size: 16px;
   border-radius: 8px;
-  background-color: rgb(200, 150, 200);
+  background-color: rgb(220, 220, 220);
 }
 body #container header #header-right {
   display: grid;
@@ -165,11 +165,11 @@ table {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
-  background-color: rgba(255, 153, 113, 0.3);
+  background-color: rgb(200, 200, 200);
 }
 
 .hour-row:nth-child(even) {
-  background-color: rgba(255, 255, 154, 0.3);
+  background-color: rgb(220, 220, 220);
 }
 
 .hour-row > td {
@@ -237,7 +237,7 @@ table {
     min-inline-size: 0;
   }
   body #container .day-section {
-    justify-content: flex-center;
+    justify-content: center;
   }
 }
 
