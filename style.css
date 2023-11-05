@@ -43,7 +43,7 @@ body #container {
   margin-inline: auto;
   inline-size: 96rem;
   background-color: rgb(220, 220, 220);
-  box-shadow: -10px 0px 10px rgb(230, 230, 230), 10px 0px 10px rgb(200, 200, 200);
+  box-shadow: -10px 0px 10px rgb(230, 230, 230), 10px 0px 10px rgb(150, 150, 150);
   border-radius: 2rem;
   block-size: 100vh;
 }
@@ -83,7 +83,7 @@ body #container header #header-left #toggle-parent .toggle-c {
 body #container header #header-left #toggle-parent #toggle {
   display: flex;
   align-items: center;
-  background-color: rgb(32, 3, 23);
+  background-color: rgb(150, 150, 150);
   block-size: 20px;
   inline-size: 32px;
   border-radius: 10px/10px;
@@ -165,7 +165,7 @@ table {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(150, 150, 150);
 }
 
 .hour-row:nth-child(even) {
