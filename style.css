@@ -43,7 +43,8 @@ body #container {
   margin-inline: auto;
   inline-size: 96rem;
   background-color: rgb(220, 220, 220);
-  box-shadow: -10px 0px 10px rgba(250, 230, 250, 0.2), 10px 0px 10px rgba(150, 180, 180, 0.2);
+  background-image: linear-gradient(to bottom right, rgb(220, 220, 220), rgb(230, 233, 233));
+  box-shadow: -10px 0px 10px rgba(250, 240, 250, 0.4), 10px 0px 10px rgba(150, 180, 180, 0.2);
   border-radius: 2rem;
   block-size: 100vh;
 }
@@ -85,16 +86,20 @@ body #container header #header-left #toggle-parent #toggle {
   display: flex;
   align-items: center;
   background-color: rgb(180, 180, 180);
+  background-image: linear-gradient(to bottom right, rgb(150, 150, 150), rgb(230, 233, 233));
   block-size: 20px;
   inline-size: 32px;
   border-radius: 10px/10px;
-  box-shadow: -1px -1px 2px rgba(255, 255, 154, 0.4);
+  box-shadow: 3px 3px 5px rgba(250, 240, 250, 0.4), -3px -3px 7px rgb(180, 180, 180);
 }
 body #container header #header-left #toggle-parent #toggle #toggle-inner-circle {
   block-size: 16px;
   inline-size: 16px;
   border-radius: 8px;
   background-color: rgb(220, 220, 220);
+  background-image: linear-gradient(to bottom right, rgb(220, 220, 220), 80%, rgb(180, 180, 180));
+  border-top: 1px solid rgba(250, 240, 250, 0.4);
+  border-left: 1px solid rgba(250, 240, 250, 0.4);
 }
 body #container header #header-right {
   display: grid;
