@@ -1,14 +1,19 @@
-// colors curently important
+// colors curently in use
+    // main
 $main: rgb(220  , 220, 220);
 $main_between: rgb(230, 233, 233);
 $main_light: rgba(250, 240, 250, .4);
 $main_dark: rgb(180, 180 , 180);
 $main_darker: rgb(150, 150 , 150);
 $main_dark_shadow: rgba(150, 180 , 180, .2);
+    // typograpy
+$text_lables: rgb(100,80,100);
+$text_main: rgba(100,80,100);
+
 
 // used previously or potentially
 $text_support: rgb(250, 191, 65);
-$text_main: rgba(255, 255, 154, 1);
+
 $table_row_1: rgba(255,153, 113, .3);
 $table_row_2: rgba(255, 255, 154, .3);
 $bright_cold_yellow_shadow: rgba(255, 255, 154, .4);

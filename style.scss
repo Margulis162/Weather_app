@@ -166,7 +166,9 @@ body {
 .info-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  block-size: 40px;
+  margin-block-end: 10px;
 }
 
 // classes day section
@@ -198,9 +200,10 @@ table {
 }
 .hour-row {
   inline-size: 100%;
-  text-align: center;
+  max-block-size:60px;
   border-spacing: 0;
-  background-color: abstract.$main_dark;
+  background-color: abstract.$main_between;
+
 }
 
 .hour-row:nth-child(even) {
@@ -208,7 +211,7 @@ table {
 }
 
 .hour-row > td {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
 }
 
 // scroll bar
@@ -219,8 +222,9 @@ table {
 // typography
 .label {
   font-weight: bold;
-  font-size: 0.6rem;
-  color: abstract.$text_support;
+  font-size: 1rem;
+  color: abstract.$text_lables;
+  letter-spacing: .2rem;
 }
 
 .value-sub-info {
@@ -228,11 +232,7 @@ table {
   font-size: 0.75rem;
 }
 
-.day-card-day {
-  font-size: 0.75rem;
-  color: abstract.$text_support;
-  margin-block-start: 0.5rem;
-}
+// responible for responsivness section
 
 @media screen and (max-width: 960px) {
   #container {
@@ -262,9 +262,6 @@ table {
         }
       }
     }
-  }
-  .hour-row > td {
-    padding: 0;
   }
 }
 
