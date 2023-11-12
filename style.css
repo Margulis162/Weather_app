@@ -119,6 +119,7 @@ body #container .day-section {
   inline-size: inherit;
   justify-content: space-between;
   margin-block: 25px;
+  padding-inline: 30px;
   flex-wrap: wrap;
 }
 body #container footer {
@@ -179,6 +180,7 @@ table {
   max-block-size: 60px;
   border-spacing: 0;
   background-color: rgb(230, 233, 233);
+  text-align: center;
 }
 
 .hour-row:nth-child(even) {
@@ -239,6 +241,9 @@ table {
   }
   body #container .day-section {
     justify-content: center;
+  }
+  body #container .day-section {
+    padding-inline: 0;
   }
 }
 
