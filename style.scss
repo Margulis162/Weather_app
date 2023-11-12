@@ -194,11 +194,10 @@ table {
 }
 .hour-section {
   inline-size: inherit;
-  // block-size: 540px;
-  overflow-y: auto;
   overflow-x: hidden;
-  // border-radius: 5px;
-  // background-color: abstract.$back;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  
 }
 .hour-row {
   inline-size: 100%;
@@ -217,11 +216,7 @@ table {
 
 // scroll bar
 .hour-section::-webkit-scrollbar {
-  width: 8px;
-}
-.hour-section::-webkit-scrollbar-thumb {
-  background-image: url(icons/scroll_bar_holder.svg);
-  height: 52px;
+  display: none;
 }
 
 // typography

@@ -157,8 +157,9 @@ table {
 
 .hour-section {
   inline-size: inherit;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .hour-row {
@@ -177,12 +178,7 @@ table {
 }
 
 .hour-section::-webkit-scrollbar {
-  width: 8px;
-}
-
-.hour-section::-webkit-scrollbar-thumb {
-  background-image: url(icons/scroll_bar_holder.svg);
-  height: 52px;
+  display: none;
 }
 
 .label {
