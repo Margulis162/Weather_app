@@ -73,12 +73,15 @@ body {
         display: flex;
         inline-size: 30rem;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-around;
         margin-block: 3rem;
-        margin-inline-start: 10px;
+        margin-inline-start: 20px;
         padding: 0.5rem;
         padding-inline-start: 0;
         min-inline-size: 36rem;
+        .tempBig{
+          font-size:3rem;
+        }
 
         #toggle-parent {
           display: flex;
@@ -86,8 +89,9 @@ body {
           inline-size: 8rem;
           justify-content: space-around;
           align-items: center;
-          font-size: 1rem;
-          color: abstract.$magenta;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: abstract.$text_lables;
 
           // two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch 
           .toggle-f {

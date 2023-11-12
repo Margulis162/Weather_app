@@ -33,7 +33,7 @@ body {
   margin: 0;
   block-size: 100vh;
   background-color: rgb(220, 220, 220);
-  color: rgb(100, 80, 100);
+  color: rgb(160, 100, 160);
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0.1rem;
 }
@@ -60,12 +60,15 @@ body #container header #header-left {
   display: flex;
   inline-size: 30rem;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   margin-block: 3rem;
-  margin-inline-start: 10px;
+  margin-inline-start: 20px;
   padding: 0.5rem;
   padding-inline-start: 0;
   min-inline-size: 36rem;
+}
+body #container header #header-left .tempBig {
+  font-size: 3rem;
 }
 body #container header #header-left #toggle-parent {
   display: flex;
@@ -73,8 +76,9 @@ body #container header #header-left #toggle-parent {
   inline-size: 8rem;
   justify-content: space-around;
   align-items: center;
-  font-size: 1rem;
-  color: magenta;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(100, 80, 100);
 }
 body #container header #header-left #toggle-parent .toggle-f {
   justify-self: flex-start;
