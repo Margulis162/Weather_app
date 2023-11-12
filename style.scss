@@ -44,13 +44,6 @@ body {
   block-size: 100vh;
   background-color: abstract.$main;
 
-  // background-size: 100% auto;
-  // background
-  // background-image: url(images/bottom_back.svg);
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-position: center bottom;
-
   // typography
   color: abstract.$text_main;
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -63,7 +56,7 @@ body {
     margin-inline: auto;
     inline-size: 96rem;
     background-color: abstract.$main;
-    box-shadow: -10px 0px 10px abstract.$main_light, 10px 0px 10px abstract.$main_dark;
+    box-shadow: -10px 0px 10px abstract.$main_light, 10px 0px 10px abstract.$main_dark_shadow;
     border-radius: 2rem;
     block-size: 100vh;
     header {
@@ -81,9 +74,10 @@ body {
         align-items: center;
         justify-content: flex-start;
         margin-block: 3rem;
+        margin-inline-start: 10px;
         padding: 0.5rem;
         padding-inline-start: 0;
-        min-inline-size: 46rem;
+        min-inline-size: 36rem;
 
         #toggle-parent {
           display: flex;
@@ -251,6 +245,7 @@ table {
   body {
     #container {
       inline-size: 100vw;
+      border-radius:0;
       header {
         display: flex;
 

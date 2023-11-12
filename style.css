@@ -43,7 +43,7 @@ body #container {
   margin-inline: auto;
   inline-size: 96rem;
   background-color: rgb(220, 220, 220);
-  box-shadow: -10px 0px 10px rgb(230, 230, 230), 10px 0px 10px rgb(150, 150, 150);
+  box-shadow: -10px 0px 10px rgba(250, 230, 250, 0.2), 10px 0px 10px rgba(150, 180, 180, 0.2);
   border-radius: 2rem;
   block-size: 100vh;
 }
@@ -61,9 +61,10 @@ body #container header #header-left {
   align-items: center;
   justify-content: flex-start;
   margin-block: 3rem;
+  margin-inline-start: 10px;
   padding: 0.5rem;
   padding-inline-start: 0;
-  min-inline-size: 46rem;
+  min-inline-size: 36rem;
 }
 body #container header #header-left #toggle-parent {
   display: flex;
@@ -83,7 +84,7 @@ body #container header #header-left #toggle-parent .toggle-c {
 body #container header #header-left #toggle-parent #toggle {
   display: flex;
   align-items: center;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(180, 180, 180);
   block-size: 20px;
   inline-size: 32px;
   border-radius: 10px/10px;
@@ -166,7 +167,7 @@ table {
   inline-size: 100%;
   text-align: center;
   border-spacing: 0;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(180, 180, 180);
 }
 
 .hour-row:nth-child(even) {
@@ -210,6 +211,7 @@ table {
 @media (max-width: 959px) {
   body #container {
     inline-size: 100vw;
+    border-radius: 0;
   }
   body #container header {
     display: flex;
