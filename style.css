@@ -277,6 +277,10 @@ table {
   body #container .day-section {
     padding-inline: 0;
   }
+  .jost {
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
