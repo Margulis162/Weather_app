@@ -74,18 +74,19 @@ body #container header #header-left #header-current-temp {
   margin-inline-start: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-block-size: 106px;
+  justify-content: flex-start;
+  min-block-size: 156px;
 }
 body #container header #header-left #header-current-temp #tempBig {
-  background-color: rgb(230, 233, 233);
-  color: rgb(100, 80, 100);
   block-size: 50px;
   padding-block-start: 5px;
   border-radius: 25px;
   text-align: center;
-  background-image: linear-gradient(to bottom right, rgb(220, 220, 220), rgb(230, 233, 233));
+  background-color: rgb(230, 233, 233);
+  color: rgb(100, 80, 100);
+  background-image: linear-gradient(to bottom right, rgb(230, 233, 233), rgb(220, 220, 220));
   box-shadow: 3px 3px 2px rgba(250, 240, 250, 0.4), inset 3px 3px 7px rgb(180, 180, 180), -3px -3px 5px rgb(180, 185, 185);
+  margin-block-end: 30px;
 }
 body #container header #header-left #header-current-temp #toggle-parent {
   display: flex;
@@ -107,7 +108,7 @@ body #container header #header-left #header-current-temp #toggle-parent #toggle 
   display: flex;
   align-items: center;
   background-color: rgb(180, 180, 180);
-  background-image: linear-gradient(to bottom right, rgb(150, 150, 150), rgb(230, 233, 233));
+  background-image: linear-gradient(to bottom right, rgb(180, 180, 180), rgb(150, 150, 150));
   block-size: 20px;
   inline-size: 32px;
   border-radius: 10px/10px;
@@ -126,9 +127,16 @@ body #container header #header-right {
   display: grid;
   inline-size: 30%;
   justify-content: space-around;
+  padding-block: 25px;
+  block-size: 156px;
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
+  background-color: rgb(230, 233, 233);
+  color: rgb(100, 80, 100);
+  background-image: linear-gradient(to bottom right, rgb(230, 233, 233), rgb(220, 220, 220));
+  box-shadow: 3px 3px 2px rgba(250, 240, 250, 0.4), inset 3px 3px 7px rgb(180, 180, 180), -3px -3px 5px rgb(180, 185, 185);
+  border-radius: 40px;
 }
 body #container .day-section {
   display: flex;
@@ -137,6 +145,7 @@ body #container .day-section {
   margin-block: 25px;
   padding-inline: 30px;
   flex-wrap: wrap;
+  background-color: rgb(230, 233, 233);
 }
 body #container footer {
   display: flex;
@@ -176,7 +185,7 @@ body #container footer {
   align-items: center;
   border-radius: 0.25rem;
   block-size: 100px;
-  min-inline-size: 62px;
+  min-inline-size: 75px;
   padding-block-end: 10px;
   margin-inline: 15px;
 }
@@ -276,6 +285,13 @@ table {
   }
   body #container .day-section {
     padding-inline: 0;
+  }
+  body #container header #header-right {
+    border-radius: 0px;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    border-radius: 0;
   }
   .jost {
     letter-spacing: 0.1rem;

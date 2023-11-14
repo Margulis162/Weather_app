@@ -90,17 +90,18 @@ body {
           margin-inline-start: 30px;
           display:flex;
           flex-direction: column;
-          justify-content: space-between;
-          min-block-size: 106px;
+          justify-content: flex-start;
+          min-block-size: 156px;
           #tempBig{
-            background-color: abstract.$main_between;
-            color: abstract.$text_lables;
             block-size: 50px;
             padding-block-start:5px;
             border-radius: 25px;
             text-align: center;
-            background-image: linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
+            background-color: abstract.$main_between;
+            color: abstract.$text_lables;
+            background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
             box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
+            margin-block-end: 30px;
           }
 
           #toggle-parent {
@@ -125,7 +126,7 @@ body {
               display: flex;
               align-items: center;
               background-color: abstract.$main_dark;
-              background-image:linear-gradient( to bottom right, abstract.$main_darker, abstract.$main_between);
+              background-image:linear-gradient( to bottom right, abstract.$main_dark, abstract.$main_darker);
               block-size: 20px;
               inline-size: 32px;
               border-radius: 10px/10px;
@@ -151,10 +152,16 @@ body {
         display: grid;
         inline-size: 30%;
         justify-content: space-around;
+        padding-block: 25px;
+        block-size:156px;
         gap: 0.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        // min-inline-size: 50rem;
+        background-color: abstract.$main_between;
+        color: abstract.$text_lables;
+        background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
+        box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
+        border-radius: 40px;
       }
     }
 
@@ -165,6 +172,8 @@ body {
       margin-block: 25px;
       padding-inline: 30px;
       flex-wrap: wrap;
+      background-color: abstract.$main_between;
+           
     }
     footer{
       display: flex;
@@ -211,9 +220,13 @@ body {
   align-items: center;
   border-radius: 0.25rem;
   block-size: 100px;
-  min-inline-size: 62px;
+  min-inline-size: 75px;
   padding-block-end: 10px;
   margin-inline: 15px;
+  // background-color: abstract.$main_between;
+  // color: abstract.$text_lables;
+  // background-image: linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
+  // box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
 }
 
 // classes hour section (table)
@@ -325,6 +338,15 @@ table {
 
   body #container .day-section {
     padding-inline:0;
+  }
+
+  body #container header #header-right {
+    border-radius: 0px;
+    background-color: transparent;
+    
+    background-image: none;
+    box-shadow:  none;
+    border-radius: 0;
   }
 
   .jost{
