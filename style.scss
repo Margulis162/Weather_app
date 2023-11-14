@@ -94,13 +94,13 @@ body {
           min-block-size: 106px;
           #tempBig{
             background-color: abstract.$main_between;
-            background-image: linear-gradient();
             color: abstract.$text_lables;
             block-size: 50px;
             padding-block-start:5px;
             border-radius: 25px;
             text-align: center;
-            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark;
+            background-image: linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
+            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
           }
 
           #toggle-parent {
@@ -129,7 +129,7 @@ body {
               block-size: 20px;
               inline-size: 32px;
               border-radius: 10px/10px;
-              box-shadow: 3px 3px 3px abstract.$main_light, -3px -3px 7px abstract.$main_dark;
+              box-shadow: 3px 3px 3px abstract.$main_light, -3px -3px 7px abstract.$main_dark_cyan;
               
               #toggle-inner-circle {
                 block-size: 16px;
