@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .blurred {
@@ -41,12 +41,11 @@ body #container {
   display: flex;
   align-items: center;
   margin-inline: auto;
-  inline-size: 96rem;
+  inline-size: 960px;
   background-color: rgb(220, 220, 220);
   background-image: linear-gradient(to bottom right, rgb(220, 220, 220), rgb(230, 233, 233));
   box-shadow: -10px 0px 10px rgba(250, 240, 250, 0.4), 10px 0px 10px rgba(150, 180, 180, 0.2);
   border-radius: 2rem;
-  block-size: 100vh;
 }
 body #container header {
   inline-size: 100%;
@@ -58,17 +57,12 @@ body #container header {
 }
 body #container header #header-left {
   display: flex;
-  inline-size: 30rem;
   align-items: center;
   justify-content: space-around;
   margin-block: 3rem;
   margin-inline-start: 20px;
   padding: 0.5rem;
   padding-inline-start: 0;
-  min-inline-size: 36rem;
-}
-body #container header #header-left .tempBig {
-  font-size: 3rem;
 }
 body #container header #header-left #toggle-parent {
   display: flex;
@@ -112,7 +106,6 @@ body #container header #header-right {
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
-  min-inline-size: 50rem;
 }
 body #container .day-section {
   display: flex;
@@ -123,8 +116,10 @@ body #container .day-section {
   flex-wrap: wrap;
 }
 body #container footer {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  min-block-size: 5rem;
+  flex-basis: 5rem;
 }
 
 .weather-icon {
@@ -170,8 +165,6 @@ table {
 
 .hour-section {
   inline-size: inherit;
-  overflow-x: hidden;
-  overflow-y: scroll;
   scrollbar-width: none;
 }
 
@@ -197,14 +190,14 @@ table {
 
 .label {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgb(100, 80, 100);
   letter-spacing: 0.2rem;
 }
 
 .value-sub-info {
   font-weight: lighter;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 #time-europ {
@@ -212,6 +205,10 @@ table {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+}
+
+.tempBig span {
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 960px) {

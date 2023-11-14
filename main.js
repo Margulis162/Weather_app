@@ -106,7 +106,7 @@ function renderDailyWeather(daily, current){
     function renderHourlyWeather(hourly, current, template, current_hr_formatter,){
         hourlySection.innerHTML = "";
         // ajust to increase the amount of rows displaied
-        const chopped = hourly.slice(0, 10);
+        const chopped = hourly.slice(0, 12);
         
         chopped.forEach(hour => {
             const element = template.content.cloneNode(true);

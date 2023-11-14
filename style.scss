@@ -17,7 +17,7 @@
 }
 
 html{
-  font-size: 10px;
+  font-size: 15px;
 }
 
 // to blur placeholders while fetching content
@@ -54,12 +54,11 @@ body {
     display: flex;
     align-items: center;
     margin-inline: auto;
-    inline-size: 96rem;
+    inline-size: 960px;
     background-color: abstract.$main;
     background-image: linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
     box-shadow: -10px 0px 10px abstract.$main_light, 10px 0px 10px abstract.$main_dark_shadow;
     border-radius: 2rem;
-    block-size: 100vh;
     header {
       inline-size: 100%;
       display: flex;
@@ -71,17 +70,15 @@ body {
 
       #header-left {
         display: flex;
-        inline-size: 30rem;
+        // inline-size: 30rem;
         align-items: center;
         justify-content: space-around;
         margin-block: 3rem;
         margin-inline-start: 20px;
         padding: 0.5rem;
         padding-inline-start: 0;
-        min-inline-size: 36rem;
-        .tempBig{
-          font-size:3rem;
-        }
+        // min-inline-size: 36rem;
+    
 
         #toggle-parent {
           display: flex;
@@ -131,7 +128,7 @@ body {
         gap: 0.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        min-inline-size: 50rem;
+        // min-inline-size: 50rem;
       }
     }
 
@@ -144,8 +141,10 @@ body {
       flex-wrap: wrap;
     }
     footer{
+      display: flex;
+      flex-direction: column;
       flex-grow: 1;
-      min-block-size: 5rem;
+      flex-basis: 5rem;
     }
   }
 }
@@ -198,8 +197,6 @@ table {
 }
 .hour-section {
   inline-size: inherit;
-  overflow-x: hidden;
-  overflow-y: scroll;
   scrollbar-width: none;
   
 }
@@ -227,14 +224,14 @@ table {
 // typography
 .label {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: .8rem;
   color: abstract.$text_lables;
   letter-spacing: .2rem;
 }
 
 .value-sub-info {
   font-weight: lighter;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 #time-europ{
@@ -243,6 +240,11 @@ table {
   justify-content: center;
   flex-grow:1;
 }
+
+.tempBig span{
+  font-size:2.5rem;
+}
+
 
 // responible for responsivness section
 
