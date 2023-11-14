@@ -3,10 +3,19 @@
 
 @font-face {
   font-family: "tektur";
-  src: url("fonts/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
-    url("fonts/tektur-variablefont_wdthwght-webfont.woff") format("woff");
+  src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'jostregular';
+  src: url('fonts/jost/jost-variablefont_wght-webfont.woff2') format('woff2'),
+       url('fonts/jost/jost-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 // general
@@ -17,7 +26,7 @@
 }
 
 html{
-  font-size: 15px;
+  font-size: 12px;
 }
 
 // to blur placeholders while fetching content
@@ -62,7 +71,7 @@ body {
     header {
       inline-size: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       align-items: center;
       align-self: center;
@@ -70,53 +79,70 @@ body {
 
       #header-left {
         display: flex;
-        // inline-size: 30rem;
         align-items: center;
         justify-content: space-around;
         margin-block: 3rem;
         margin-inline-start: 20px;
         padding: 0.5rem;
         padding-inline-start: 0;
-        // min-inline-size: 36rem;
-    
-
-        #toggle-parent {
-          display: flex;
-          flex-direction: row;
-          inline-size: 8rem;
-          justify-content: space-around;
-          align-items: center;
-          font-size: 1.2rem;
-          font-weight: bold;
-          color: abstract.$text_lables;
-
-          // two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch 
-          .toggle-f {
-            justify-self: flex-start;
-          }
-          .toggle-c {
-            justify-content: flex-end;
+        
+        #header-current-temp{
+          margin-inline-start: 30px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-block-size: 106px;
+          #tempBig{
+            background-color: abstract.$main_between;
+            background-image: linear-gradient();
+            color: abstract.$text_lables;
+            block-size: 50px;
+            padding-block-start:5px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark;
           }
 
-          #toggle {
+          #toggle-parent {
             display: flex;
+            flex-direction: row;
+            inline-size: 8rem;
+            justify-content: space-around;
             align-items: center;
-            background-color: abstract.$main_dark;
-            background-image:linear-gradient( to bottom right, abstract.$main_darker, abstract.$main_between);
-            block-size: 20px;
-            inline-size: 32px;
-            border-radius: 10px/10px;
-            box-shadow: 3px 3px 5px abstract.$main_light, -3px -3px 7px abstract.$main_dark;
-            
-            #toggle-inner-circle {
-              block-size: 16px;
-              inline-size: 16px;
-              border-radius: 8px;
-              background-color: abstract.$main;
-              background-image: linear-gradient( to bottom right, abstract.$main, 80%, abstract.$main_dark);
-              border-top: 1px solid abstract.$main_light;
-              border-left: 1px solid abstract.$main_light;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: abstract.$text_lables;
+  
+            // two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch 
+            .toggle-f {
+              justify-self: flex-start;
             }
+            .toggle-c {
+              justify-content: flex-end;
+            }
+  
+            #toggle {
+              display: flex;
+              align-items: center;
+              background-color: abstract.$main_dark;
+              background-image:linear-gradient( to bottom right, abstract.$main_darker, abstract.$main_between);
+              block-size: 20px;
+              inline-size: 32px;
+              border-radius: 10px/10px;
+              box-shadow: 3px 3px 3px abstract.$main_light, -3px -3px 7px abstract.$main_dark;
+              
+              #toggle-inner-circle {
+                block-size: 16px;
+                inline-size: 16px;
+                border-radius: 8px;
+                background-color: abstract.$main;
+                background-image: linear-gradient( to bottom right, abstract.$main, 80%, abstract.$main_dark);
+                border-top: 1px solid abstract.$main_light;
+                border-left: 1px solid abstract.$main_light;
+              }
+        }
+
+       
           }
         }
       }
@@ -241,8 +267,14 @@ table {
   flex-grow:1;
 }
 
-.tempBig span{
+#tempBig span{
   font-size:2.5rem;
+ 
+}
+
+.jost{
+  font-family: "jostregular";
+  font-size: 1.05rem;
 }
 
 
@@ -271,7 +303,6 @@ table {
           justify-content: space-around;
         }
         #header-right {
-          // inline-size: 100%;
           flex-grow: 1;
         }
       }
