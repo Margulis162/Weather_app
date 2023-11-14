@@ -237,6 +237,13 @@ table {
   font-size: 0.75rem;
 }
 
+#time-europ{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow:1;
+}
+
 // responible for responsivness section
 
 @media screen and (max-width: 960px) {
