@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <system.webServer>
+      <staticContent>
+          <mimeMap fileExtension=".woff" mimeType="application/x-font-woff" />
+      </staticContent>
+      </system.webServer>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
@@ -433,11 +438,7 @@
     
     <footer></footer>
     <script type="module" src="/main.js"></script>
-    <system.webServer>
-      <staticContent>
-          <mimeMap fileExtension=".woff" mimeType="application/x-font-woff" />
-      </staticContent>
-      </system.webServer>
+
     </div>
   </body>
 </html>
