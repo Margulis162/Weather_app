@@ -74,9 +74,9 @@ function setValueMetricHr(selector, value, {parent = document} ={}){
 function getIconUrl(iconCode, day){
     console.log(day);
     if(day === 0){
-        return `./icons/${ICON_MAP_NIGHT.get(iconCode)}.svg`
+        return `icons/${ICON_MAP_NIGHT.get(iconCode)}.svg`
     }else{
-        return `./icons/${ICON_MAP.get(iconCode)}.svg`
+        return `icons/${ICON_MAP.get(iconCode)}.svg`
     }
 }
 
