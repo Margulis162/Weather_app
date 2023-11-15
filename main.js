@@ -1,8 +1,8 @@
 // import
 // import ".style.css"
 import { getWeather } from "./weather.js"
-import { ICON_MAP } from "/iconmap_day.js"
-import { ICON_MAP_NIGHT } from "/iconmap_night.js"
+import { ICON_MAP } from "./iconmap_day.js"
+import { ICON_MAP_NIGHT } from "./iconmap_night.js"
 // const
 const currentIcon = document.querySelector("[data-current-icon]");
 const dailySection = document.querySelector("[data-day-section]");
@@ -74,9 +74,9 @@ function setValueMetricHr(selector, value, {parent = document} ={}){
 function getIconUrl(iconCode, day){
     console.log(day);
     if(day === 0){
-        return `icons/${ICON_MAP_NIGHT.get(iconCode)}.svg`
+        return `./icons/${ICON_MAP_NIGHT.get(iconCode)}.svg`
     }else{
-        return `icons/${ICON_MAP.get(iconCode)}.svg`
+        return `./icons/${ICON_MAP.get(iconCode)}.svg`
     }
 }
 
