@@ -1,5 +1,7 @@
 // import
 // import ".style.css"
+
+
 import { getWeather } from "./weather.js"
 import { ICON_MAP } from "./iconmap_day.js"
 import { ICON_MAP_NIGHT } from "./iconmap_night.js"
@@ -30,6 +32,12 @@ const url_fahrenheit = "https://api.open-meteo.com/v1/forecast?&current=temperat
 const url_celsius ="https://api.open-meteo.com/v1/forecast?&current=temperature_2m,is_day,weathercode,windspeed_10m&hourly=temperature_2m,apparent_temperature,precipitation,weathercode,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timeformat=unixtime"
 
 // f(x)
+
+<system.webServer>
+<staticContent>
+    <mimeMap fileExtension=".woff" mimeType="application/x-font-woff" />
+</staticContent>
+</system.webServer>
 
 function positionSuccess({coords}){
     getWeather( coords.latitude, coords.longitude,  Intl.DateTimeFormat().resolvedOptions().timeZone, url).then(renderWeather
