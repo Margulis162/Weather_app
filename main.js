@@ -1,8 +1,8 @@
 // import
 // import ".style.css"
-import { getWeather } from "weather.js"
-import { ICON_MAP } from "iconmap_day.js"
-import { ICON_MAP_NIGHT } from "iconmap_night.js"
+import { getWeather } from "./weather.js"
+import { ICON_MAP } from "./iconmap_day.js"
+import { ICON_MAP_NIGHT } from "./iconmap_night.js"
 // const
 const currentIcon = document.querySelector("[data-current-icon]");
 const dailySection = document.querySelector("[data-day-section]");
