@@ -100,7 +100,7 @@ body {
             background-color: abstract.$main_between;
             color: abstract.$text_lables;
             background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
-            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
+            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 3px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
             margin-block-end: 30px;
           }
 
@@ -160,7 +160,7 @@ body {
         background-color: abstract.$main_between;
         color: abstract.$text_lables;
         background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
-        box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
+        box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 3px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
         border-radius: 40px;
       }
     }
@@ -215,7 +215,6 @@ body {
 .day-card {
   display: flex;
   flex-direction: column;
-  // box-shadow: -3px -3px 20px abstract.$bright_cold_yellow;  so I can see 'em;
   justify-content: space-around;
   align-items: center;
   border-radius: 0.25rem;
@@ -223,10 +222,6 @@ body {
   min-inline-size: 75px;
   padding-block-end: 10px;
   margin-inline: 15px;
-  // background-color: abstract.$main_between;
-  // color: abstract.$text_lables;
-  // background-image: linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
-  // box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 7px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
 }
 
 // classes hour section (table)
