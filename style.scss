@@ -1,22 +1,24 @@
 // variables & imports
 @use "abstract.scss";
 
-@font-face {
-  font-family: "tektur";
-  src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
-    url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "tektur";
+//   src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
+//     url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'jostregular';
-  src: url('fonts/jost/jost-variablefont_wght-webfont.woff2') format('woff2'),
-       url('fonts/jost/jost-variablefont_wght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+// @font-face {
+//   font-family: 'jostregular';
+//   src: url('fonts/jost/jost-variablefont_wght-webfont.woff2') format('woff2'),
+//        url('fonts/jost/jost-variablefont_wght-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
 
-}
+// }
+
+
 
 // general
 *,
@@ -49,14 +51,16 @@ html{
 
 // main
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   block-size: 100vh;
   background-color: abstract.$main;
 
   // typography
   color: abstract.$text_main;
-  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  // font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //   "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0.1rem;
 
   #container {
@@ -285,10 +289,10 @@ table {
  
 }
 
-.jost{
-  font-family: "jostregular";
-  font-size: 1.05rem;
-}
+// .jost{
+//   font-family: "jostregular";
+//   font-size: 1.05rem;
+// }
 
 
 // responible for responsivness section
@@ -349,9 +353,9 @@ table {
     border-radius: 0;
   }
 
-  .jost{
-    letter-spacing: .1rem;
-    font-size: .9rem;
-  }
+  // .jost{
+  //   letter-spacing: .1rem;
+  //   font-size: .9rem;
+  // }
   
 }

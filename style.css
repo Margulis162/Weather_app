@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "tektur";
   src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"), url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
@@ -9,7 +9,7 @@
   src: url("fonts/jost/jost-variablefont_wght-webfont.woff2") format("woff2"), url("fonts/jost/jost-variablefont_wght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
 *,
 *::before,
 *::after {
@@ -41,7 +41,8 @@ body {
   block-size: 100vh;
   background-color: rgb(220, 220, 220);
   color: rgb(160, 100, 160);
-  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; */
   letter-spacing: 0.1rem;
 }
 body #container {
@@ -244,10 +245,10 @@ table {
   font-size: 2.5rem;
 }
 
-.jost {
+/* .jost {
   font-family: "jostregular";
   font-size: 1.05rem;
-}
+} */
 
 @media screen and (max-width: 960px) {
   #container {
@@ -294,10 +295,10 @@ table {
     box-shadow: none;
     border-radius: 0;
   }
-  .jost {
+  /* .jost {
     letter-spacing: 0.1rem;
     font-size: 0.9rem;
-  }
+  } */
 }
 
 /*# sourceMappingURL=style.css.map */
