@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    
+    <meta charset="UTF-8" />   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    
+    <link rel="icon" href="data:,">
+
   
-    <script type="module" crossorigin src="/assets/index-b3ceb05a.js"></script>
-    <link rel="stylesheet" href="/assets/index-c9dac22b.css">
+    <script type="module" crossorigin src="/assets/index-4b425502.js"></script>
+    <link rel="stylesheet" href="/assets/index-585e573c.css">
   </head>
   <body class="blurred">
     <div id="container" class="column">
@@ -17,20 +19,20 @@
         
             <!-- left header with large icon -->
       <div id="header-left">
-        <img class="weather-icon large" src="/assets/sun-2c56a31c.svg" data-current-icon/>
+        <img class="weather-icon large" src="/icons/sun-2c56a31c.svg" data-current-icon/>
             <div class="column">
-          <div class="header-current-temp">
-            <div class="tempBig">
+          <div id="header-current-temp">
+            <div id="tempBig">
               <span data-current-temp>31</span>
-              <span data-header-degrees>&deg;F</span>
+              <span class="jost" data-header-degrees>&deg;F</span>
             </div>
             
             <div id="toggle-parent">
-              <span>F&deg;</span>
+              <span class="jost">F&deg;</span>
               <div id="toggle" class="toggle-f" data-toggle-switch>
                 <div id="toggle-inner-circle"></div>
               </div>
-              <span>C&deg;</span>
+              <span class="jost">C&deg;</span>
             </div>
           </div>
             
@@ -42,32 +44,32 @@
       <div id="header-right">
         
         <div class="info-group">
-          <div class="label">HIGH</div>
+          <div class="label jost">HIGH</div>
           <div><span data-current-high>32</span>&deg;</div>
         </div>
 
         <div class="info-group">
-          <div class="label">FL HIGH</div>
+          <div class="label jost">FL HIGH</div>
           <div><span data-current-fl-high>27</span>&deg;</div>
         </div>
         
         <div class="info-group">
-          <div class="label">WIND</div>
+          <div class="label jost">WIND</div>
           <div><span data-current-wind>9</span><span class="value-sub-info" data-header-wind>mph</span></div>
         </div>
         
         <div class="info-group">
-          <div class="label">LOW</div>
+          <div class="label jost">LOW</div>
           <div><span data-current-low>19</span>&deg;</div>
         </div>
         
         <div class="info-group">
-          <div class="label">FL LOW</div>
+          <div class="label jost">FL LOW</div>
           <div><span data-current-fl-low>32</span>&deg;</div>
         </div>
         
         <div class="info-group">
-          <div class="label">PRECIP</div>
+          <div class="label jost">PRECIP</div>
           <div><span data-current-precip>0.1</span><span class="value-sub-info" data-header-percip>in</span></div>
         </div>
       </div>
@@ -77,49 +79,49 @@
     <section class="day-section" data-day-section>
       
       <div class="day-card">
-        <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
 
       <div class="day-card">
-        <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
       
       <div class="day-card">
-        <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
        </div>
        
        <div class="day-card">
-         <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+         <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
          <div class="day-card-day">Monday</div>
          <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
           <div class="day-card-day">Monday</div>
           <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
           <div class="day-card-day">Monday</div>
           <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
        </div>
        
        <div class="day-card">
-         <img src="/assets/cloud-bolt-36cea421.svg" class="weather-icon">
+         <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon">
          <div class="day-card-day">Monday</div>
          <div>32&deg;</div>
         </div>
@@ -140,7 +142,7 @@
             </td>
  
            <td>
-             <img src="/assets/cloud-43d747cc.svg" alt="" class="weather-icon">
+             <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
            </td>
            
            <td>
@@ -178,7 +180,7 @@
               </td>
               
               <td>
-            <img src="/assets/cloud-43d747cc.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
           </td>
 
           <td>
@@ -216,7 +218,7 @@
           </td>
           
           <td>
-            <img src="/assets/cloud-43d747cc.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
           </td>
           
           <td>
@@ -254,7 +256,7 @@
           </td>
 
           <td>
-            <img src="/assets/cloud-43d747cc.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
           </td>
 
           <td>
@@ -292,7 +294,7 @@
           </td>
           
           <td>
-            <img src="/assets/cloud-43d747cc.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
           </td>
           
           <td>
@@ -334,7 +336,7 @@
     <template id="day-card-template">
       <div class="day-card">
         <img data-icon class="weather-icon" />
-        <div class="label" data-date></div>
+        <div class="label jost" data-date></div>
         <div><span data-temp></span><span>&deg;</span></div>
       </div>
     </template>
@@ -344,7 +346,7 @@
       <tr class="hour-row">
         <td>
           <div class="info-group">
-            <div class="label" data-day></div>
+            <div class="label jost" data-day></div>
             <div data-time></div>
           </div>
         </td>
@@ -353,19 +355,19 @@
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Temp</div>
+            <div class="label jost">Temp</div>
             <div><span data-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <div class="label">FL Temp</div>
+            <div class="label jost">FL Temp</div>
             <div><span data-fl-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Wind</div>
+            <div class="label jost">Wind</div>
             <div>
               <span data-wind></span><span class="value-sub-info">mph</span>
             </div>
@@ -373,7 +375,7 @@
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Precip</div>
+            <div class="label jost">Precip</div>
             <div>
               <span data-precip></span><span class="value-sub-info">in</span>
             </div>
@@ -388,9 +390,11 @@
       <tr class="hour-row">
         <td>
           <div class="info-group">
-            <div class="label" data-day></div>
+            <div class="label jost" data-day></div>
             <div class="row">
-              <div  data-time></div><span class="value-sub-info">hr</span>
+              <div id="time-europ">
+                <div  data-time></div><span class="value-sub-info">hr</span>
+              </div>
             </div>
           </div>
         </td>
@@ -399,19 +403,19 @@
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Temp</div>
+            <div class="label jost">Temp</div>
             <div><span data-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <div class="label">FL Temp</div>
+            <div class="label jost">FL Temp</div>
             <div><span data-fl-temp></span><span>&deg;</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Wind</div>
+            <div class="label jost">Wind</div>
             <div>
               <span data-wind></span><span class="value-sub-info">km/s</span>
             </div>
@@ -419,7 +423,7 @@
         </td>
         <td>
           <div class="info-group">
-            <div class="label">Precip</div>
+            <div class="label jost">Precip</div>
             <div>
               <span data-precip></span><span class="value-sub-info">cm</span>
             </div>
@@ -431,6 +435,7 @@
     
     <footer></footer>
     
+
     </div>
   </body>
 </html>
