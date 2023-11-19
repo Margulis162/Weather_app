@@ -1,5 +1,6 @@
 // variables & imports
 @use "abstract.scss";
+@import "typo.scss";
 
 @font-face {
   font-family: "tektur";
@@ -256,37 +257,6 @@ table {
 .hour-section::-webkit-scrollbar {
   display: none;
 }
-
-// typography
-.label {
-  font-weight: bold;
-  font-size: .8rem;
-  color: abstract.$text_lables;
-  letter-spacing: .2rem;
-}
-
-.value-sub-info {
-  font-weight: lighter;
-  font-size: 1rem;
-}
-
-#time-europ{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow:1;
-}
-
-#tempBig span{
-  font-size:2.5rem;
- 
-}
-
-.jost{
-  font-family: "jostregular";
-  font-size: 1.05rem;
-}
-
 
 // responible for responsivness section
 
