@@ -21,7 +21,12 @@
   
   #temp-big span{
     font-size:2.5rem;
-   
+    text-align: center;
+    color: abstract.$text_lables;
+  }
+
+  #current-time span{
+    font-size: 1.5rem;
   }
   
   .jost{

@@ -19,6 +19,12 @@
 
 #temp-big span {
   font-size: 2.5rem;
+  text-align: center;
+  color: rgb(100, 80, 100);
+}
+
+#current-time span {
+  font-size: 1.5rem;
 }
 
 .jost {
@@ -106,21 +112,16 @@ header {
   margin-inline-start: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   min-block-size: 156px;
-}
-
-#temp-big {
   inline-size: 130px;
   block-size: 156px;
   padding-block-start: 5px;
   padding-inline: 25px;
   border-radius: 25px;
-  text-align: center;
   background-color: rgb(230, 233, 233);
-  color: rgb(100, 80, 100);
-  background-image: linear-gradient(to bottom right, rgb(230, 233, 233), rgb(220, 220, 220));
   box-shadow: 3px 3px 2px rgba(250, 240, 250, 0.4), inset 3px 3px 3px rgb(180, 180, 180), -3px -3px 5px rgb(180, 185, 185);
+  background-image: linear-gradient(to bottom right, rgb(230, 233, 233), rgb(220, 220, 220));
 }
 
 #header-right {
