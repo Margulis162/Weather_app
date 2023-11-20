@@ -4,22 +4,20 @@
 
 @font-face {
   font-family: "tektur";
-  src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2") format("woff2"),
+  src: url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff2")
+      format("woff2"),
     url("fonts/tektur/tektur-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'jostregular';
-  src: url('fonts/jost/jost-variablefont_wght-webfont.woff2') format('woff2'),
-       url('fonts/jost/jost-variablefont_wght-webfont.woff') format('woff');
+  font-family: "jostregular";
+  src: url("fonts/jost/jost-variablefont_wght-webfont.woff2") format("woff2"),
+    url("fonts/jost/jost-variablefont_wght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
-
-
 
 // general
 *,
@@ -28,12 +26,12 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 12px;
 }
 
 // to blur placeholders while fetching content
-.blurred {             
+.blurred {
   filter: blur(5px);
   overflow: hidden;
 }
@@ -49,7 +47,6 @@ html{
   flex-direction: row;
 }
 
-
 // main
 body {
   margin: 0;
@@ -61,137 +58,169 @@ body {
   font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   letter-spacing: 0.1rem;
+}
 
-  #container {
-    display: flex;
-    align-items: center;
-    margin-inline: auto;
-    inline-size: 960px;
-    background-color: abstract.$main;
-    background: url('images/container_back.svg') top left no-repeat,
-    linear-gradient( to bottom right, abstract.$main, abstract.$main_between);
-    box-shadow: -10px 0px 10px abstract.$main_light,
-     10px 0px 10px abstract.$main_dark_shadow, 
-     inset 5px 3px 10px abstract.$inset_light,
-     inset -5px -3px 10px abstract.$main_inset_shadow;
-    border-radius: 2rem;
-    header {
-      inline-size: 100%;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-      align-self: center;
-      
+#container {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  inline-size: 960px;
+  background-color: abstract.$main;
+  background: url("images/container_back.svg") top left no-repeat,
+    linear-gradient(to bottom right, abstract.$main, abstract.$main_between);
+  box-shadow: -10px 0px 10px abstract.$main_light,
+    10px 0px 10px abstract.$main_dark_shadow,
+    inset 5px 3px 10px abstract.$inset_light,
+    inset -5px -3px 10px abstract.$main_inset_shadow;
+  border-radius: 2rem;
+}
 
-      #header-left {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin-block: 3rem;
-        margin-inline-start: 20px;
-        padding: 0.5rem;
-        padding-inline-start: 0;
-        
-        #header-current-temp{
-          margin-inline-start: 30px;
-          display:flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          min-block-size: 156px;
-          #tempBig{
-            block-size: 50px;
-            padding-block-start:5px;
-            padding-inline:25px;
-            border-radius: 25px;
-            text-align: center;
-            background-color: abstract.$main_between;
-            color: abstract.$text_lables;
-            background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
-            box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 3px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
-            margin-block-end: 30px;
-          }
+header {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+}
 
-          #toggle-parent {
-            display: flex;
-            flex-direction: row;
-            inline-size: 8rem;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: abstract.$text_lables;
-  
-            // two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch 
-            .toggle-f {
-              justify-self: flex-start;
-            }
-            .toggle-c {
-              justify-content: flex-end;
-            }
-  
-            #toggle {
-              display: flex;
-              align-items: center;
-              background-color: abstract.$main_dark;
-              background-image:linear-gradient( to bottom right, abstract.$main_dark, abstract.$main_darker);
-              block-size: 20px;
-              inline-size: 32px;
-              border-radius: 10px/10px;
-              box-shadow: 3px 3px 3px abstract.$main_light, -3px -3px 7px abstract.$main_dark_cyan;
-              
-              #toggle-inner-circle {
-                block-size: 16px;
-                inline-size: 16px;
-                border-radius: 8px;
-                background-color: abstract.$main;
-                background-image: linear-gradient( to bottom right, abstract.$main, 80%, abstract.$main_dark);
-                border-top: 1px solid abstract.$main_light;
-                border-left: 1px solid abstract.$main_light;
-              }
-        }
+#header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-block: 3rem;
+  margin-inline-start: 20px;
+  padding: 0.5rem;
+  padding-inline-start: 0;
+}
 
-       
-          }
-        }
-      }
+#header-current-temp {
+  margin-inline-start: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-block-size: 156px;
+}
 
-      #header-right {
-        display: grid;
-        inline-size: 30%;
-        justify-content: space-around;
-        padding-block: 25px;
-        padding-inline:35px;
-        block-size:156px;
-        gap: 0.5rem;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(2, auto);
-        background-color: abstract.$main_between;
-        color: abstract.$text_lables;
-        background-image: linear-gradient( to bottom right, abstract.$main_between, abstract.$main);
-        box-shadow:  3px 3px 2px abstract.$main_light, inset 3px 3px 3px abstract.$main_dark,  -3px -3px 5px abstract.$main_dark_cyan;
-        border-radius: 40px;
-      }
-    }
+#tempBig {
+  block-size: 50px;
+  inline-size: 130px;
+  padding-block-start: 5px;
+  padding-inline: 25px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: abstract.$main_between;
+  color: abstract.$text_lables;
+  background-image: linear-gradient(
+    to bottom right,
+    abstract.$main_between,
+    abstract.$main
+  );
+  box-shadow: 3px 3px 2px abstract.$main_light,
+    inset 3px 3px 3px abstract.$main_dark,
+    -3px -3px 5px abstract.$main_dark_cyan;
+  margin-block-end: 30px;
+}
 
-    .day-section {
-      display: flex;
-      inline-size: inherit;
-      justify-content: space-between;
-      margin-block-start: 25px;
-      padding-block:25px;
-      padding-inline: 30px;
-      flex-wrap: wrap;
-      background-color: abstract.$day_section;
-           
-    }
-    footer{
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      flex-basis: 5rem;
-    }
-  }
+#header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 400px;
+}
+
+#header-current {
+  display: grid;
+  inline-size: 300px;
+  justify-content: space-around;
+  padding-block: 25px;
+  padding-inline: 35px;
+  block-size: 156px;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  background-color: abstract.$main_between;
+  color: abstract.$text_lables;
+  background-image: linear-gradient(
+    to bottom right,
+    abstract.$main_between,
+    abstract.$main
+  );
+  box-shadow: 3px 3px 2px abstract.$main_light,
+    inset 3px 3px 3px abstract.$main_dark,
+    -3px -3px 5px abstract.$main_dark_cyan;
+  border-radius: 40px;
+}
+
+#toggle-parent {
+  display: flex;
+  flex-direction: column;
+  block-size: 156px;
+  inline-size: 30px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: abstract.$text_lables;
+}
+
+// two classes to provide reference for what type of content we need to load and also to provide animation for the toggle switch
+.toggle-f {
+  justify-self: flex-start;
+}
+.toggle-c {
+  justify-content: flex-end;
+}
+
+#toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: abstract.$main_dark;
+  background-image: linear-gradient(
+    to bottom right,
+    abstract.$main_dark,
+    abstract.$main_darker
+  );
+  block-size: 100px;
+  inline-size: 18px;
+  border-radius: 10px/10px;
+  box-shadow: 3px 3px 3px abstract.$main_light,
+    -3px -3px 7px abstract.$main_dark_cyan;
+  padding: 1px;
+}
+
+#toggle-inner-circle {
+  block-size: 16px;
+  inline-size: 16px;
+  border-radius: 8px;
+  background-color: abstract.$main;
+  background-image: linear-gradient(
+    to bottom right,
+    abstract.$main,
+    80%,
+    abstract.$main_dark
+  );
+  border-top: 1px solid abstract.$main_light;
+  border-left: 1px solid abstract.$main_light;
+}
+
+.day-section {
+  display: flex;
+  inline-size: inherit;
+  justify-content: space-between;
+  margin-block-start: 25px;
+  padding-block: 25px;
+  padding-inline: 30px;
+  flex-wrap: wrap;
+  background-color: abstract.$day_section;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 5rem;
 }
 
 //  classes. header
@@ -242,11 +271,11 @@ table {
 .hour-section {
   inline-size: inherit;
   scrollbar-width: none;
-  
 }
+
 .hour-row {
   inline-size: 100%;
-  max-block-size:60px;
+  max-block-size: 60px;
   border-spacing: 0;
   background-color: abstract.$table_odd;
   text-align: center;
@@ -281,7 +310,7 @@ table {
   body {
     #container {
       inline-size: 100vw;
-      border-radius:0;
+      border-radius: 0;
       header {
         display: flex;
 
@@ -311,21 +340,20 @@ table {
   }
 
   body #container .day-section {
-    padding-inline:0;
+    padding-inline: 0;
   }
 
   body #container header #header-right {
     border-radius: 0px;
     background-color: transparent;
-    
+
     background-image: none;
-    box-shadow:  none;
+    box-shadow: none;
     border-radius: 0;
   }
 
-  .jost{
-    letter-spacing: .1rem;
-    font-size: .9rem;
+  .jost {
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
   }
-  
 }
