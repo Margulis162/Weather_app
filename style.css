@@ -17,7 +17,7 @@
   flex-grow: 1;
 }
 
-#tempBig span {
+#temp-big span {
   font-size: 2.5rem;
 }
 
@@ -86,7 +86,7 @@ body {
 header {
   inline-size: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
   align-self: center;
@@ -110,9 +110,9 @@ header {
   min-block-size: 156px;
 }
 
-#tempBig {
-  block-size: 50px;
+#temp-big {
   inline-size: 130px;
+  block-size: 156px;
   padding-block-start: 5px;
   padding-inline: 25px;
   border-radius: 25px;
@@ -121,22 +121,21 @@ header {
   color: rgb(100, 80, 100);
   background-image: linear-gradient(to bottom right, rgb(230, 233, 233), rgb(220, 220, 220));
   box-shadow: 3px 3px 2px rgba(250, 240, 250, 0.4), inset 3px 3px 3px rgb(180, 180, 180), -3px -3px 5px rgb(180, 185, 185);
-  margin-block-end: 30px;
 }
 
 #header-right {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   flex-basis: 400px;
 }
 
-#header-current {
+#header-table {
   display: grid;
-  inline-size: 300px;
+  inline-size: 350px;
   justify-content: space-around;
   padding-block: 25px;
-  padding-inline: 35px;
   block-size: 156px;
   gap: 0.5rem;
   grid-template-columns: repeat(3, auto);
@@ -313,7 +312,14 @@ table {
   body #container .day-section {
     padding-inline: 0;
   }
-  body #container header #header-right {
+  body #container header #header-table {
+    border-radius: 0px;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  body #container header #temp-big {
     border-radius: 0px;
     background-color: transparent;
     background-image: none;
