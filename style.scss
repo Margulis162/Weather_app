@@ -50,14 +50,9 @@ html {
 // main
 body {
   margin: 0;
-  block-size: 100vh;
   background-color: abstract.$main_darker;
+  background-image: linear-gradient(to bottom right, abstract.$main_darker, abstract.$main);
 
-  // typography
-  color: abstract.$text_main;
-  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  letter-spacing: 0.1rem;
 }
 
 #container {
@@ -352,7 +347,7 @@ table {
     border-radius: 0;
   }
 
-  body #container header #temp-big {
+  body #container header #header-current-temp {
     border-radius: 0px;
     background-color: transparent;
 

@@ -1,3 +1,9 @@
+body {
+  color: rgb(160, 100, 160);
+  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 0.1rem;
+}
+
 .label {
   font-weight: bold;
   font-size: 0.8rem;
@@ -71,11 +77,8 @@ html {
 
 body {
   margin: 0;
-  block-size: 100vh;
   background-color: rgb(150, 150, 150);
-  color: rgb(160, 100, 160);
-  font-family: "Tektur", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  letter-spacing: 0.1rem;
+  background-image: linear-gradient(to bottom right, rgb(150, 150, 150), rgb(220, 220, 220));
 }
 
 #container {
@@ -320,7 +323,7 @@ table {
     box-shadow: none;
     border-radius: 0;
   }
-  body #container header #temp-big {
+  body #container header #header-current-temp {
     border-radius: 0px;
     background-color: transparent;
     background-image: none;
