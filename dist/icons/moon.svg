@@ -519,11 +519,11 @@
      showgrid="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:zoom="0.40625"
-     inkscape:cx="-279.38462"
-     inkscape:cy="470.15385"
+     inkscape:zoom="0.28726213"
+     inkscape:cx="-579.60999"
+     inkscape:cy="1214.9182"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1052"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -665,5 +665,5 @@
          x="1.1212223"
          y="113.46659" /></g><path
        id="path767"
-       style="fill:#333333;stroke-width:10.1703;stroke-linecap:round;paint-order:fill markers stroke;fill-opacity:1;filter:url(#filter1976-7)"
+       style="fill:#960052;stroke-width:10.1703;stroke-linecap:round;paint-order:fill markers stroke;fill-opacity:1;filter:url(#filter1976-7)"
        d="M 256 10.722656 A 245.2775 245.2775 0 0 0 146.97266 36.451172 A 154.21823 154.21823 0 0 1 179.22852 32.642578 A 154.21823 154.21823 0 0 1 333.44727 186.85938 A 154.21823 154.21823 0 0 1 179.22852 341.07812 A 154.21823 154.21823 0 0 1 25.009766 186.85938 A 154.21823 154.21823 0 0 1 26.466797 170.20703 A 245.2775 245.2775 0 0 0 10.722656 256 A 245.2775 245.2775 0 0 0 256 501.27734 A 245.2775 245.2775 0 0 0 501.27734 256 A 245.2775 245.2775 0 0 0 256 10.722656 z " /></g></svg>

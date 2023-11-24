@@ -8,8 +8,8 @@
     <link rel="icon" href="data:,">
 
   
-    <script type="module" crossorigin src="/assets/index-4b425502.js"></script>
-    <link rel="stylesheet" href="/assets/index-585e573c.css">
+    <script type="module" crossorigin src="/assets/index-6d790919.js"></script>
+    <link rel="stylesheet" href="/assets/index-5392e888.css">
   </head>
   <body class="blurred">
     <div id="container" class="column">
@@ -22,26 +22,25 @@
         <img class="weather-icon large" src="/icons/sun-2c56a31c.svg" data-current-icon/>
             <div class="column">
           <div id="header-current-temp">
-            <div id="tempBig">
+            <div id="temp-big">
               <span data-current-temp>31</span>
               <span class="jost" data-header-degrees>&deg;F</span>
+
+              
             </div>
-            
-            <div id="toggle-parent">
-              <span class="jost">F&deg;</span>
-              <div id="toggle" class="toggle-f" data-toggle-switch>
-                <div id="toggle-inner-circle"></div>
-              </div>
-              <span class="jost">C&deg;</span>
-            </div>
-          </div>
-            
+            <div id="current-time" data-current-time>
+              <span id="hr">00</span><span>:</span><span id="min">00</span><span>:</span><span id="sec">00</span>
+            </div>  
+           
+          </div>  
         </div>
       </div>
       
       
       <!-- right header with current data -->
       <div id="header-right">
+      <div id="header-table">
+        
         
         <div class="info-group">
           <div class="label jost">HIGH</div>
@@ -73,55 +72,65 @@
           <div><span data-current-precip>0.1</span><span class="value-sub-info" data-header-percip>in</span></div>
         </div>
       </div>
+
+      <div id="toggle-parent">
+        <span class="jost">F&deg;</span>
+        <div id="toggle" class="toggle-f" data-toggle-switch>
+          <div id="toggle-inner-circle"></div>
+        </div>
+        <span class="jost">C&deg;</span>
+      </div>
+    </div>
+    
     </header>
 
     <!-- placeholder for ferched data -->
     <section class="day-section" data-day-section>
       
       <div class="day-card">
-        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
 
       <div class="day-card">
-        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
       
       <div class="day-card">
-        <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+        <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
        </div>
        
        <div class="day-card">
-         <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+         <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
          <div class="day-card-day">Monday</div>
          <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
           <div class="day-card-day">Monday</div>
           <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
           <div class="day-card-day">Monday</div>
           <div>32&deg;</div>
         </div>
         
         <div class="day-card">
-          <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon"/>
+          <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon"/>
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
        </div>
        
        <div class="day-card">
-         <img src="/assets/cloud-bolt-9e086318.svg" class="weather-icon">
+         <img src="/assets/cloud-bolt-5fcb0fdf.svg" class="weather-icon">
          <div class="day-card-day">Monday</div>
          <div>32&deg;</div>
         </div>
@@ -142,7 +151,7 @@
             </td>
  
            <td>
-             <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
+             <img src="/assets/cloud-afada636.svg" alt="" class="weather-icon">
            </td>
            
            <td>
@@ -180,7 +189,7 @@
               </td>
               
               <td>
-            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-afada636.svg" alt="" class="weather-icon">
           </td>
 
           <td>
@@ -218,7 +227,7 @@
           </td>
           
           <td>
-            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-afada636.svg" alt="" class="weather-icon">
           </td>
           
           <td>
@@ -256,7 +265,7 @@
           </td>
 
           <td>
-            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-afada636.svg" alt="" class="weather-icon">
           </td>
 
           <td>
@@ -294,7 +303,7 @@
           </td>
           
           <td>
-            <img src="/assets/cloud-8817dc55.svg" alt="" class="weather-icon">
+            <img src="/assets/cloud-afada636.svg" alt="" class="weather-icon">
           </td>
           
           <td>
@@ -433,9 +442,9 @@
        
     </template>
     
-    <footer></footer>
+    <footer><p>Designed by <a href="https://github.com/Margulis162">Mark Margulis</a></p></footer>
     
-
+    
     </div>
   </body>
 </html>
