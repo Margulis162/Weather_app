@@ -135,7 +135,7 @@ header {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   background-color: abstract.$main_between;
-  color: abstract.$text_lables;
+  color: abstract.$text_main;
   background-image: linear-gradient(
     to bottom right,
     abstract.$main_between,
