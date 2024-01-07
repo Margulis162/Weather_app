@@ -1,177 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   fill="hsl(200, 100%, 20%)"
-   viewBox="0 0 640 512"
-   version="1.1"
-   id="svg32572"
-   sodipodi:docname="smog.svg"
-   xml:space="preserve"
-   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs32576"><filter
-       inkscape:menu="Shadows and Glows"
-       inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Cutout Glow"
-       id="filter2744"
-       x="-0.37317678"
-       y="-0.53310969"
-       width="1.7557286"
-       height="2.0796122"><feColorMatrix
-         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.20999999999999999 0.71999999999999997 0.070000000000000007 0 0"
-         result="result1"
-         id="feColorMatrix2716" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 2 0"
-         result="result9"
-         id="feColorMatrix2718" /><feComposite
-         in2="result9"
-         in="SourceGraphic"
-         operator="in"
-         result="result4"
-         id="feComposite2720" /><feFlood
-         result="result2"
-         flood-color="rgb(0,0,0)"
-         id="feFlood2722" /><feComposite
-         in2="result9"
-         operator="in"
-         result="result10"
-         id="feComposite2724" /><feComposite
-         in2="result4"
-         operator="atop"
-         id="feComposite2726" /><feGaussianBlur
-         stdDeviation="96.513813"
-         result="result8"
-         id="feGaussianBlur2728" /><feOffset
-         dx="3"
-         dy="3"
-         result="result3"
-         in="result8"
-         id="feOffset2730" /><feFlood
-         flood-opacity="1"
-         flood-color="rgb(219,173,62)"
-         result="result5"
-         id="feFlood2732" /><feMerge
-         result="result6"
-         id="feMerge2740"><feMergeNode
-           in="result5"
-           id="feMergeNode2734" /><feMergeNode
-           in="result3"
-           id="feMergeNode2736" /><feMergeNode
-           in="result4"
-           id="feMergeNode2738" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="fbSourceGraphic"
-         id="feComposite2742" /><feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix2754" /><feOffset
-         id="feOffset2756"
-         dy="3"
-         dx="3"
-         in="fbSourceGraphic" /><feGaussianBlur
-         id="feGaussianBlur2758"
-         stdDeviation="3"
-         result="blur" /><feFlood
-         id="feFlood2760"
-         flood-color="rgb(0,0,0)"
-         flood-opacity="1"
-         result="flood" /><feComposite
-         in2="fbSourceGraphic"
-         id="feComposite2762"
-         in="flood"
-         operator="in"
-         result="composite" /><feBlend
-         in2="composite"
-         id="feBlend2764"
-         in="blur"
-         mode="normal" /></filter><filter
-       inkscape:label="Metal Casting"
-       inkscape:menu="Bevels"
-       inkscape:menu-tooltip="Smooth drop-like bevel with metallic finish"
-       style="color-interpolation-filters:sRGB;"
-       id="filter1976"
-       x="-0.026250002"
-       y="-0.037500003"
-       width="1.0525"
-       height="1.075"
-       inkscape:auto-region="false"><feColorMatrix
-         type="saturate"
-         in="SourceGraphic"
-         result="result1"
-         id="feColorMatrix1966"
-         values="0.48883711132325436" /><feGaussianBlur
-         stdDeviation="34.593613459346507"
-         in="SourceAlpha"
-         id="feGaussianBlur1968" /><feSpecularLighting
-         specularExponent="8"
-         specularConstant="3.9152500219178616"
-         surfaceScale="3.2846649169921864"
-         id="feSpecularLighting1972"><feDistantLight
-           azimuth="58"
-           elevation="17"
-           id="feDistantLight1970" /></feSpecularLighting><feComposite
-         in2="result1"
-         operator="atop"
-         id="feComposite1974" /></filter></defs><sodipodi:namedview
-     id="namedview32574"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.21044922"
-     inkscape:cx="-311.23898"
-     inkscape:cy="-1045.3828"
-     inkscape:window-width="1920"
-     inkscape:window-height="1052"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg32572" /><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
-     d="M32 144c0 79.5 64.5 144 144 144H299.3c22.6 19.9 52.2 32 84.7 32s62.1-12.1 84.7-32H496c61.9 0 112-50.1 112-112s-50.1-112-112-112c-10.7 0-21 1.5-30.8 4.3C443.8 27.7 401.1 0 352 0c-32.6 0-62.4 12.2-85.1 32.3C242.1 12.1 210.5 0 176 0C96.5 0 32 64.5 32 144zM616 368H280c-13.3 0-24 10.7-24 24s10.7 24 24 24H616c13.3 0 24-10.7 24-24s-10.7-24-24-24zm-64 96H440c-13.3 0-24 10.7-24 24s10.7 24 24 24H552c13.3 0 24-10.7 24-24s-10.7-24-24-24zm-192 0H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24zM224 392c0-13.3-10.7-24-24-24H96c-13.3 0-24 10.7-24 24s10.7 24 24 24H200c13.3 0 24-10.7 24-24z"
-     id="path32568"
-     style="fill:#006464;fill-opacity:1;filter:url(#filter1976)" /><!-- Code injected by live-server --><script
-     id="script32570">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]></script></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="a" x1="99.45" y1="30.68" x2="232.64" y2="261.37" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f3f7fe"/>
+            <stop offset="0.45" stop-color="#f3f7fe"/>
+            <stop offset="1" stop-color="#deeafb"/>
+        </linearGradient>
+        <linearGradient id="b" x1="17.25" y1="43.11" x2="89.25" y2="167.82" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#d4d7dd"/>
+            <stop offset="0.45" stop-color="#d4d7dd"/>
+            <stop offset="1" stop-color="#bec1c6"/>
+        </linearGradient>
+        <linearGradient id="c" x1="107.25" y1="-8.85" x2="179.25" y2="115.86" xlink:href="#b"/>
+        <linearGradient id="d" x1="174.75" y1="-47.82" x2="246.75" y2="76.89" xlink:href="#b"/>
+        <linearGradient id="e" y1="-4.89" x2="89.25" y2="119.82" xlink:href="#b"/>
+        <linearGradient id="f" x1="107.25" y1="-56.85" x2="179.25" y2="67.86" xlink:href="#b"/>
+        <linearGradient id="g" x1="174.75" y1="-95.82" x2="246.75" y2="28.89" xlink:href="#b"/>
+        <symbol id="h" viewBox="0 0 350 222">
+            <path d="M291,107c-.85,0-1.68.09-2.53.13A83.9,83.9,0,0,0,135.6,42.92,55.91,55.91,0,0,0,51,91a56.56,56.56,0,0,0,.8,9.08A60,60,0,0,0,63,219c1.35,0,2.67-.11,4-.2v.2H291a56,56,0,0,0,0-112Z" stroke="#e6effc" stroke-miterlimit="10" stroke-width="6" fill="url(#a)"/>
+        </symbol>
+        <symbol id="i" viewBox="0 0 264 72" overflow="visible">
+            <g>
+                <line x1="12" y1="60" x2="42" y2="60" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#b)"/>
+                <line x1="102" y1="60" x2="192" y2="60" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke-dasharray="60 60" stroke="url(#c)"/>
+                <line x1="222" y1="60" x2="252" y2="60" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#d)"/>
+
+                <animateTransform
+                    attributeName="transform"
+                    additive="sum"
+                    type="translate"
+                    values="-24 0; 24 0; -24 0"
+                    dur="6s"
+                    repeatCount="indefinite"/>
+            </g>
+            <g>
+                <line x1="12" y1="12" x2="42" y2="12" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#e)"/>
+                <line x1="102" y1="12" x2="192" y2="12" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke-dasharray="60 60" stroke="url(#f)"/>
+                <line x1="222" y1="12" x2="252" y2="12" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" stroke="url(#g)"/>
+
+                <animateTransform
+                    attributeName="transform"
+                    additive="sum"
+                    type="translate"
+                    values="24 0; -24 0; 24 0"
+                    dur="6s"
+                    repeatCount="indefinite"/>
+            </g>
+        </symbol>
+    </defs>
+    <use width="350" height="222" transform="translate(81 145)" xlink:href="#h"/>
+    <use width="264" height="72" transform="translate(124 402)" xlink:href="#i"/>
+</svg>
