@@ -1,75 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   fill="hsl(200, 100%, 20%)"
-   viewBox="0 0 512 512"
-   version="1.1"
-   id="svg309"
-   sodipodi:docname="sun.svg"
-   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs313">
-    <filter
-       inkscape:label="Metal Casting"
-       inkscape:menu="Bevels"
-       inkscape:menu-tooltip="Smooth drop-like bevel with metallic finish"
-       style="color-interpolation-filters:sRGB;"
-       id="filter11388"
-       x="-0.16211718"
-       y="-0.16211718"
-       width="1.3242344"
-       height="1.3242344">
-      <feColorMatrix
-         values="0.27000000000000002"
-         type="saturate"
-         in="SourceGraphic"
-         result="result1"
-         id="feColorMatrix11378" />
-      <feGaussianBlur
-         stdDeviation="34.590000000000003"
-         in="SourceAlpha"
-         id="feGaussianBlur11380" />
-      <feSpecularLighting
-         specularExponent="8"
-         specularConstant="3.9199999999999999"
-         surfaceScale="3.2799999999999998"
-         id="feSpecularLighting11384">
-        <feDistantLight
-           azimuth="58"
-           elevation="17"
-           id="feDistantLight11382" />
-      </feSpecularLighting>
-      <feComposite
-         in2="result1"
-         operator="atop"
-         id="feComposite11386" />
-    </filter>
-  </defs>
-  <sodipodi:namedview
-     id="namedview311"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.84179688"
-     inkscape:cx="-179.97216"
-     inkscape:cy="378.95127"
-     inkscape:window-width="1920"
-     inkscape:window-height="1052"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg309" />
-  <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-  <path
-     d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zm32 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128z"
-     id="path307"
-     style="fill:#960052;fill-opacity:1;filter:url(#filter11388)" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="a" x1="149.99" y1="119.24" x2="234.01" y2="264.76" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fbbf24"/>
+            <stop offset="0.45" stop-color="#fbbf24"/>
+            <stop offset="1" stop-color="#f59e0b"/>
+        </linearGradient>
+        <symbol id="b" viewBox="0 0 384 384">
+            <!-- core -->
+            <circle cx="192" cy="192" r="84" stroke="#f8af18" stroke-miterlimit="10" stroke-width="6" fill="url(#a)"/>
+
+            <!-- rays -->
+            <path d="M192,61.66V12m0,360V322.34M284.17,99.83l35.11-35.11M64.72,319.28l35.11-35.11m0-184.34L64.72,64.72M319.28,319.28l-35.11-35.11M61.66,192H12m360,0H322.34" fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24">
+                <animateTransform
+                    attributeName="transform"
+                    additive="sum"
+                    type="rotate"
+                    values="0 192 192; 45 192 192"
+                    dur="6s"
+                    repeatCount="indefinite"/>
+            </path>
+        </symbol>
+    </defs>
+    <use width="384" height="384" transform="translate(64 64)" xlink:href="#b"/>
 </svg>
